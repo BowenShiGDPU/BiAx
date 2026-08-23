@@ -49,8 +49,11 @@ def routed_probability_torch(core_probability: torch.Tensor,
     numerical stability guard used by the evaluation pipeline. Non-routed
     cells are copied from the core prediction exactly.
     """
-    core = core_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
+    original_core = core_probability.to(torch.float64)
+    core = original_core.clamp(1e-7, 1 - 1e-7)
     expert = expert_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
+    if scale == 0.0:
+        return torch.where(route, core, original_core)
     mixed = torch.sigmoid(
         (1.0 - scale) * torch.logit(core) + scale * torch.logit(expert))
-    return torch.where(route, mixed, core_probability.to(torch.float64))
+    return torch.where(route, mixed, original_core)
