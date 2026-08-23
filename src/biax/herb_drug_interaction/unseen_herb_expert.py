@@ -45,11 +45,10 @@ def routed_probability_torch(core_probability: torch.Tensor,
                              scale: float) -> torch.Tensor:
     """Compose core and expert probabilities on routed cells.
 
-    A zero scale returns the original tensor without a numerical round trip,
-    and non-routed cells are copied from the core prediction exactly.
+    Both probabilities are clipped before conversion to logits, matching the
+    numerical stability guard used by the evaluation pipeline. Non-routed
+    cells are copied from the core prediction exactly.
     """
-    if scale == 0.0:
-        return core_probability
     core = core_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
     expert = expert_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
     mixed = torch.sigmoid(

@@ -89,7 +89,7 @@ def test_herb_drug_forward() -> None:
     assert logits.shape == (2,)
 
 
-def test_herb_router_zero_alpha_returns_core_exactly() -> None:
+def test_herb_router_zero_alpha_returns_stability_guarded_core() -> None:
     cfg = HerbConfig(semantic_dim=8, graph_dim=4, structure_dim=9,
                      constituent_dim=9, pair_mechanism_dim=6,
                      d_model=8, n_heads=2, n_layers=1,
@@ -103,11 +103,17 @@ def test_herb_router_zero_alpha_returns_core_exactly() -> None:
     model.label_memory(herb_state, drug_state, torch.zeros(3, 4),
                        torch.tensor([[1, 1, 1, 1], [0, 0, 0, 0],
                                      [1, 1, 1, 1]], dtype=torch.float32))
-    core_logit = torch.tensor([-1.25, 0.75])
+    core_logit = torch.tensor([-100.0, 0.75])
     expert = UnseenHerbExpert(21).eval()
     routed = model.route_unseen_herb(
         core_logit, expert, torch.tensor([1, 2]), torch.tensor([0, 1]), 0.0)
-    assert torch.equal(routed, torch.sigmoid(core_logit))
+    core_probability = torch.sigmoid(core_logit)
+    clipped_core = core_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
+    expected_routed = torch.sigmoid(torch.logit(clipped_core))
+    assert routed[0].item() == expected_routed[0].item()
+    assert routed[1].item() == core_probability[1].item()
+    assert bool(model.last_route.tolist()[0])
+    assert not bool(model.last_route.tolist()[1])
 
 
 def test_herb_router_leaves_supported_cells_unchanged() -> None:

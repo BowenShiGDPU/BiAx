@@ -219,14 +219,15 @@ class BiAxHDI(nn.Module):
         """Apply the herb-support router after the core forward pass.
 
         The route is active only for herbs with no direct training support.
-        Core and expert logits are converted to probabilities before their
-        logit-space convex composition, matching the released evaluation path.
+        Core and expert logits are converted to probabilities, clipped for
+        numerical stability, and then composed in logit space, matching the
+        released evaluation path.
         """
         if not hasattr(self, "_n_obs_herb"):
             raise RuntimeError("label_memory must be evaluated before routing")
         route = self._n_obs_herb[herb_index] <= EPS
         core_probability = torch.sigmoid(core_logit)
-        if alpha == 0.0 or not bool(route.any()):
+        if not bool(route.any()):
             self.last_route = route.detach()
             return core_probability
         expert_logit = expert(self._raw_herb[herb_index],
