@@ -37,3 +37,21 @@ def routed_probability(core_probability: np.ndarray, expert_probability: np.ndar
         + scale * probability_to_logit(expert_probability), -40, 40
     )))
     return np.where(route, mixed, np.asarray(core_probability, dtype=np.float64))
+
+
+def routed_probability_torch(core_probability: torch.Tensor,
+                             expert_probability: torch.Tensor,
+                             route: torch.Tensor,
+                             scale: float) -> torch.Tensor:
+    """Compose core and expert probabilities on routed cells.
+
+    A zero scale returns the original tensor without a numerical round trip,
+    and non-routed cells are copied from the core prediction exactly.
+    """
+    if scale == 0.0:
+        return core_probability
+    core = core_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
+    expert = expert_probability.to(torch.float64).clamp(1e-7, 1 - 1e-7)
+    mixed = torch.sigmoid(
+        (1.0 - scale) * torch.logit(core) + scale * torch.logit(expert))
+    return torch.where(route, mixed, core_probability.to(torch.float64))

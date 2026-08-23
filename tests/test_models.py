@@ -1,11 +1,17 @@
 from __future__ import annotations
 
+import os
+from pathlib import Path
+
+import pytest
 import torch
 
 from biax.formula_adverse_reaction.model import BiAxADR, Config as FormulaConfig
 from biax.drug_drug_interaction.model import BiAxWestern, ModelConfig as DDIConfig
 from biax.drug_pair_adverse_reaction.model import BiAxFullPairADR, ModelConfig as PairConfig
 from biax.herb_drug_interaction.model import BiAxHDI, Config as HerbConfig
+from biax.herb_drug_interaction.unseen_herb_expert import UnseenHerbExpert
+from biax.herb_drug_interaction.reproduce import reproduce_all
 
 
 def test_formula_forward() -> None:
@@ -81,3 +87,62 @@ def test_herb_drug_forward() -> None:
     logits = model.score(herb_tokens, torch.ones(3, 5, dtype=torch.bool), herb_state, drug_state,
                          torch.tensor([0, 1]), torch.tensor([1, 2]), torch.randn(2, 6), memory)
     assert logits.shape == (2,)
+
+
+def test_herb_router_zero_alpha_returns_core_exactly() -> None:
+    cfg = HerbConfig(semantic_dim=8, graph_dim=4, structure_dim=9,
+                     constituent_dim=9, pair_mechanism_dim=6,
+                     d_model=8, n_heads=2, n_layers=1,
+                     memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
+    model = BiAxHDI(3, 4, cfg).eval()
+    herb_tokens, _, herb_state = model.encode_herb(
+        torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9),
+        torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool))
+    _, drug_state = model.encode_drug(
+        torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9))
+    model.label_memory(herb_state, drug_state, torch.zeros(3, 4),
+                       torch.tensor([[1, 1, 1, 1], [0, 0, 0, 0],
+                                     [1, 1, 1, 1]], dtype=torch.float32))
+    core_logit = torch.tensor([-1.25, 0.75])
+    expert = UnseenHerbExpert(21).eval()
+    routed = model.route_unseen_herb(
+        core_logit, expert, torch.tensor([1, 2]), torch.tensor([0, 1]), 0.0)
+    assert torch.equal(routed, torch.sigmoid(core_logit))
+
+
+def test_herb_router_leaves_supported_cells_unchanged() -> None:
+    cfg = HerbConfig(semantic_dim=8, graph_dim=4, structure_dim=9,
+                     constituent_dim=9, pair_mechanism_dim=6,
+                     d_model=8, n_heads=2, n_layers=1,
+                     memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
+    model = BiAxHDI(3, 4, cfg).eval()
+    _, _, herb_state = model.encode_herb(
+        torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9),
+        torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool))
+    _, drug_state = model.encode_drug(
+        torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9))
+    model.label_memory(herb_state, drug_state, torch.zeros(3, 4),
+                       torch.tensor([[1, 1, 1, 1], [0, 0, 0, 0],
+                                     [1, 1, 1, 1]], dtype=torch.float32))
+    core_logit = torch.tensor([-1.25, 0.75])
+    expert = UnseenHerbExpert(21).eval()
+    routed = model.route_unseen_herb(
+        core_logit, expert, torch.tensor([1, 2]), torch.tensor([0, 1]), 0.5)
+    assert routed[1].item() == torch.sigmoid(core_logit)[1].item()
+    assert bool(model.last_route.tolist()[0])
+    assert not bool(model.last_route.tolist()[1])
+
+
+@pytest.mark.skipif(
+    "BIAX_HERB_DRUG_DATA" not in os.environ,
+    reason="set BIAX_HERB_DRUG_DATA to run the public-data reproduction test")
+def test_herb_drug_release_reproduces_reported_metrics() -> None:
+    repository = Path(__file__).resolve().parents[1]
+    report = reproduce_all(
+        os.environ["BIAX_HERB_DRUG_DATA"],
+        repository / "parameters/herb_drug_interaction",
+        os.environ.get("BIAX_DEVICE", "cpu"),
+        reported_decimals=3,
+    )
+    assert report["run_count"] == 30
+    assert report["all_runs_match"]

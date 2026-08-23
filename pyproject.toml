@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "biax"
-version = "1.0.0"
+version = "1.1.0"
 description = "Shared bi-axis neural architecture for interaction and adverse-reaction prediction"
 requires-python = ">=3.12"
 dependencies = [
@@ -15,6 +15,9 @@ dependencies = [
   "scipy>=1.14,<2",
   "torch>=2.9,<3",
 ]
+
+[project.scripts]
+biax-reproduce-herb-drug = "biax.herb_drug_interaction.reproduce:main"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<9"]

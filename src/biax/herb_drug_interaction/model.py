@@ -22,6 +22,9 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
+from .unseen_herb_expert import (UnseenHerbExpert,
+                                 routed_probability_torch)
+
 EPS = 1e-6
 
 
@@ -194,8 +197,7 @@ class BiAxHDI(nn.Module):
     # ------------------------------------------------------------------ herb
     def encode_herb(self, semantic, graph, structure, constituents, mask):
         """constituents: (H, S, constituent_dim); mask: (H, S) bool."""
-        if self.cfg.cold_expert:
-            self._raw_herb = torch.cat([semantic, graph, structure], dim=-1)
+        self._raw_herb = torch.cat([semantic, graph, structure], dim=-1)
         _, state = self.herb_encoder(semantic, graph, structure)
         x = self.constituent_projection(constituents)
         for block in self.constituent_blocks:
@@ -206,9 +208,33 @@ class BiAxHDI(nn.Module):
         return x, gate, self.herb_mix(torch.cat([state, pooled], dim=-1))
 
     def encode_drug(self, semantic, graph, structure):
-        if self.cfg.cold_expert:
-            self._raw_drug = torch.cat([semantic, graph, structure], dim=-1)
+        self._raw_drug = torch.cat([semantic, graph, structure], dim=-1)
         return self.drug_encoder(semantic, graph, structure)
+
+    def route_unseen_herb(self, core_logit: torch.Tensor,
+                          expert: UnseenHerbExpert,
+                          herb_index: torch.Tensor,
+                          drug_index: torch.Tensor,
+                          alpha: float) -> torch.Tensor:
+        """Apply the herb-support router after the core forward pass.
+
+        The route is active only for herbs with no direct training support.
+        Core and expert logits are converted to probabilities before their
+        logit-space convex composition, matching the released evaluation path.
+        """
+        if not hasattr(self, "_n_obs_herb"):
+            raise RuntimeError("label_memory must be evaluated before routing")
+        route = self._n_obs_herb[herb_index] <= EPS
+        core_probability = torch.sigmoid(core_logit)
+        if alpha == 0.0 or not bool(route.any()):
+            self.last_route = route.detach()
+            return core_probability
+        expert_logit = expert(self._raw_herb[herb_index],
+                              self._raw_drug[drug_index])
+        expert_probability = torch.sigmoid(expert_logit)
+        self.last_route = route.detach()
+        return routed_probability_torch(core_probability, expert_probability,
+                                        route, alpha)
 
     # ---------------------------------------------------------------- memory
     @staticmethod
