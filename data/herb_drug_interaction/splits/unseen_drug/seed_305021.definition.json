@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "test": {
+      "achieved_ratio": 20.0,
+      "negative": 25540,
+      "positive": 1277
+    },
+    "train": {
+      "achieved_ratio": 1.0,
+      "negative": 5649,
+      "positive": 5649
+    },
+    "validation": {
+      "achieved_ratio": 20.0,
+      "negative": 11740,
+      "positive": 587
+    }
+  },
+  "negative_sampling": {
+    "test": 20,
+    "train": 1,
+    "validation": 20
+  },
+  "protocol": "unseen_drug",
+  "seed": 305021,
+  "split_fractions": {
+    "test": 0.2,
+    "train": 0.7,
+    "validation": 0.1
+  }
+}

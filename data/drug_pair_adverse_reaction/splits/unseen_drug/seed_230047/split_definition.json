@@ -1,0 +1,124 @@
+{
+  "counts": [
+    {
+      "effective_negative_to_positive_ratio": 1.0,
+      "exact_frequency_decile_samples": 1474350,
+      "global_capacity_redistribution_fill_samples": 390655,
+      "joint_pair_degree_endpoint_decile_fill_samples": 231498,
+      "negative_shortfall": 0,
+      "positive_examples": 2096503,
+      "requested_by_endpoint_frequency_decile": {
+        "0": 36443,
+        "1": 45021,
+        "2": 56984,
+        "3": 71396,
+        "4": 93151,
+        "5": 124167,
+        "6": 171344,
+        "7": 247751,
+        "8": 381794,
+        "9": 868452
+      },
+      "requested_negative_examples": 2096503,
+      "sampled_by_endpoint_frequency_decile": {
+        "0": 95792,
+        "1": 99250,
+        "2": 99038,
+        "3": 102289,
+        "4": 118405,
+        "5": 142162,
+        "6": 181297,
+        "7": 251387,
+        "8": 379090,
+        "9": 627793
+      },
+      "sampled_negative_examples": 2096503,
+      "split": "training"
+    },
+    {
+      "effective_negative_to_positive_ratio": 20.0,
+      "exact_frequency_decile_samples": 3854373,
+      "global_capacity_redistribution_fill_samples": 8459556,
+      "joint_pair_degree_endpoint_decile_fill_samples": 556471,
+      "negative_shortfall": 0,
+      "positive_examples": 643520,
+      "requested_by_endpoint_frequency_decile": {
+        "0": 228320,
+        "1": 268040,
+        "2": 352180,
+        "3": 448080,
+        "4": 571920,
+        "5": 756680,
+        "6": 1054820,
+        "7": 1524440,
+        "8": 2395120,
+        "9": 5270800
+      },
+      "requested_negative_examples": 12870400,
+      "sampled_by_endpoint_frequency_decile": {
+        "0": 1163352,
+        "1": 1163143,
+        "2": 1134584,
+        "3": 1113676,
+        "4": 1163508,
+        "5": 1199870,
+        "6": 1299380,
+        "7": 1540010,
+        "8": 1612017,
+        "9": 1480860
+      },
+      "sampled_negative_examples": 12870400,
+      "split": "validation"
+    },
+    {
+      "effective_negative_to_positive_ratio": 20.0,
+      "exact_frequency_decile_samples": 9467602,
+      "global_capacity_redistribution_fill_samples": 20037588,
+      "joint_pair_degree_endpoint_decile_fill_samples": 1427370,
+      "negative_shortfall": 0,
+      "positive_examples": 1546628,
+      "requested_by_endpoint_frequency_decile": {
+        "0": 551220,
+        "1": 663220,
+        "2": 843320,
+        "3": 1063500,
+        "4": 1408400,
+        "5": 1865340,
+        "6": 2543500,
+        "7": 3649660,
+        "8": 5645340,
+        "9": 12699060
+      },
+      "requested_negative_examples": 30932560,
+      "sampled_by_endpoint_frequency_decile": {
+        "0": 2777257,
+        "1": 2772833,
+        "2": 2711378,
+        "3": 2659092,
+        "4": 2784860,
+        "5": 2886371,
+        "6": 3125116,
+        "7": 3699616,
+        "8": 3897611,
+        "9": 3618426
+      },
+      "sampled_negative_examples": 30932560,
+      "split": "test"
+    }
+  ],
+  "negative_sampling": {
+    "fixed_per_seed": true,
+    "matching": "three-stage within-split sampling: same-pair exact endpoint-frequency-decile quotas; joint pair-positive-degree and endpoint-frequency deciles; final capacity redistribution proportional to pair positive degree while prioritizing remaining endpoint-decile deficits",
+    "pool": "pair-endpoint combinations absent from the complete cleaned TwoSIDES snapshot",
+    "test_ratio": 20,
+    "training_ratio": 1,
+    "validation_ratio": 20
+  },
+  "protocol": "unseen_drug",
+  "seed": 230047,
+  "split_fractions": {
+    "test": 0.2,
+    "training": 0.7,
+    "validation": 0.1
+  }
+}

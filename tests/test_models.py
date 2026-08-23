@@ -1,0 +1,83 @@
+from __future__ import annotations
+
+import torch
+
+from biax.formula_adverse_reaction.model import BiAxADR, Config as FormulaConfig
+from biax.drug_drug_interaction.model import BiAxWestern, ModelConfig as DDIConfig
+from biax.drug_pair_adverse_reaction.model import BiAxFullPairADR, ModelConfig as PairConfig
+from biax.herb_drug_interaction.model import BiAxHDI, Config as HerbConfig
+
+
+def test_formula_forward() -> None:
+    cfg = FormulaConfig(d_model=8, n_heads=2, n_layers=1, dropout=0.0,
+                        mem_topk_f=2, mem_topk_a=2)
+    model = BiAxADR(8, 12, 6, cfg, n_endpoint=2, n_material=5).eval()
+    formula_count, endpoint_count, slots = 3, 2, 4
+    logits, _, _, _ = model(
+        torch.randn(formula_count, slots, 8), torch.ones(formula_count, slots),
+        torch.ones(formula_count, slots, dtype=torch.bool), torch.randn(endpoint_count, 12),
+        torch.randn(formula_count, endpoint_count, 6), torch.zeros(formula_count, endpoint_count),
+        torch.ones(formula_count, endpoint_count), hierarchy=torch.eye(endpoint_count),
+        presence=torch.zeros(formula_count, 5), comp_dose=torch.zeros(formula_count, 5),
+    )
+    assert logits.shape == (formula_count, endpoint_count)
+
+
+def _entity_features(n: int, cfg: DDIConfig) -> dict[str, torch.Tensor]:
+    return {"semantic": torch.randn(n, cfg.semantic_dim),
+            "graph": torch.randn(n, cfg.graph_dim),
+            "structure": torch.randn(n, cfg.structure_dim)}
+
+
+def test_drug_pair_symmetry() -> None:
+    cfg = DDIConfig(semantic_dim=8, graph_dim=4, structure_dim=9, d_model=8,
+                    n_heads=2, n_layers=1, mechanism_dim=6,
+                    memory_topk_left=2, memory_topk_right=2)
+    model = BiAxWestern("ddi_binary", n_entity=4, cfg=cfg).eval()
+    token, state = model.encode_entities(_entity_features(4, cfg))
+    labels, observed, mechanism = torch.zeros(4, 4), torch.zeros(4, 4), torch.randn(1, 6)
+    ab = model.score_ddi_binary(token, state, torch.tensor([0]), torch.tensor([1]), mechanism,
+                                labels, observed)
+    ba = model.score_ddi_binary(token, state, torch.tensor([1]), torch.tensor([0]), mechanism,
+                                labels, observed)
+    torch.testing.assert_close(ab, ba, atol=1e-6, rtol=1e-6)
+
+
+def test_drug_pair_adr_forward() -> None:
+    cfg = PairConfig(semantic_dim=8, graph_dim=4, structure_dim=9,
+                     endpoint_mechanism_dim=8, pair_mechanism_dim=6,
+                     d_model=8, n_heads=2, n_layers=1,
+                     memory_topk_drug=2, memory_topk_endpoint=2)
+    model = BiAxFullPairADR(n_endpoint=3, cfg=cfg).eval()
+    drug = {"semantic": torch.randn(4, 8), "graph": torch.randn(4, 4),
+            "structure": torch.randn(4, 9)}
+    endpoint = {"semantic": torch.randn(3, 8), "graph": torch.randn(3, 4),
+                "mechanism": torch.randn(3, 8)}
+    drug_tokens, drug_state = model.encode_drugs(drug)
+    endpoint_tokens, endpoint_state = model.encode_endpoints(endpoint)
+    neighbors = model.neighbor_tables(drug_state, endpoint_state)
+    logits = model.score_encoded(
+        drug_tokens, drug_state, endpoint_tokens, endpoint_state,
+        torch.tensor([0, 1]), torch.tensor([1, 2]), torch.tensor([0, 2]),
+        torch.randn(2, 6), torch.zeros(4, 3), torch.ones(4, 3),
+        torch.full((3,), 0.1), neighbors,
+    )
+    assert logits.shape == (2,)
+
+
+def test_herb_drug_forward() -> None:
+    cfg = HerbConfig(semantic_dim=8, graph_dim=4, structure_dim=9,
+                     constituent_dim=9, pair_mechanism_dim=6,
+                     d_model=8, n_heads=2, n_layers=1,
+                     memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
+    model = BiAxHDI(3, 4, cfg).eval()
+    semantic_h, graph_h, structure_h = torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9)
+    semantic_d, graph_d, structure_d = torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9)
+    herb_tokens, _, herb_state = model.encode_herb(
+        semantic_h, graph_h, structure_h, torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool)
+    )
+    _, drug_state = model.encode_drug(semantic_d, graph_d, structure_d)
+    memory = model.label_memory(herb_state, drug_state, torch.zeros(3, 4), torch.ones(3, 4))
+    logits = model.score(herb_tokens, torch.ones(3, 5, dtype=torch.bool), herb_state, drug_state,
+                         torch.tensor([0, 1]), torch.tensor([1, 2]), torch.randn(2, 6), memory)
+    assert logits.shape == (2,)

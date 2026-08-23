@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "test": {
+      "achieved_ratio": 20.0,
+      "negative": 27000,
+      "positive": 1350
+    },
+    "train": {
+      "achieved_ratio": 1.0,
+      "negative": 5484,
+      "positive": 5484
+    },
+    "validation": {
+      "achieved_ratio": 20.0,
+      "negative": 13580,
+      "positive": 679
+    }
+  },
+  "negative_sampling": {
+    "test": 20,
+    "train": 1,
+    "validation": 20
+  },
+  "protocol": "unseen_herb",
+  "seed": 130363,
+  "split_fractions": {
+    "test": 0.2,
+    "train": 0.7,
+    "validation": 0.1
+  }
+}
