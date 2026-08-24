@@ -59,8 +59,3 @@ drug-pair encoder, and checks both invariants of the herb-support router. Set
 `BIAX_HERB_DRUG_DATA` to the herb-drug data directory to include the complete
 30-run reproduction test. Model outputs are logits; decision thresholds are
 selected using the validation partition only.
-
-## Repository boundary
-
-This repository contains model code and protocol splits. It contains no figure
-generation, manuscript, docking, molecular-dynamics, or case-analysis code.
