@@ -84,9 +84,9 @@ def _pad_to(array: np.ndarray, slots: int, fill: float | int | bool) -> np.ndarr
 
 
 def _root(data_root: str | Path | None) -> Path:
-    value = data_root if data_root is not None else os.environ.get("BIAX_FORMULA_DATA")
+    value = data_root if data_root is not None else os.environ.get("BORA_FORMULA_DATA")
     if value is None:
-        raise ValueError("provide data_root or set BIAX_FORMULA_DATA")
+        raise ValueError("provide data_root or set BORA_FORMULA_DATA")
     return Path(value)
 
 

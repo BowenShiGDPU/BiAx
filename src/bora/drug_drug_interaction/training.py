@@ -10,7 +10,7 @@ from torch import nn
 
 from .data import TaskData
 from .metrics import binary_metrics, choose_threshold, multiclass_metrics
-from .model import BiAxWestern, ModelConfig
+from .model import BORADrugInteraction, ModelConfig
 
 
 class Trainer:
@@ -36,19 +36,19 @@ class Trainer:
         self.label = torch.as_tensor(data.label, dtype=torch.long, device=self.device)
         self.classes = np.unique(data.label)
 
-    def new_model(self, seed: int) -> BiAxWestern:
+    def new_model(self, seed: int) -> BORADrugInteraction:
         torch.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
         if self.data.task == "single_adr":
-            model = BiAxWestern(
+            model = BORADrugInteraction(
                 self.data.task, len(self.data.entity.ids), len(self.data.endpoint.ids), cfg=self.cfg
             )
         elif self.data.task == "ddi_type86":
-            model = BiAxWestern(
+            model = BORADrugInteraction(
                 self.data.task, len(self.data.entity.ids), n_class=len(self.classes), cfg=self.cfg
             )
         else:
-            model = BiAxWestern(self.data.task, len(self.data.entity.ids), cfg=self.cfg)
+            model = BORADrugInteraction(self.data.task, len(self.data.entity.ids), cfg=self.cfg)
         return model.to(self.device)
 
     def memory(self, train_rows: np.ndarray) -> tuple[torch.Tensor, torch.Tensor]:
@@ -98,7 +98,7 @@ class Trainer:
         values = np.asarray(self.data.pair_mechanism[left, right], dtype=np.float32)
         return torch.as_tensor(values, device=self.device)
 
-    def _logits(self, model: BiAxWestern, rows: np.ndarray, labels: torch.Tensor,
+    def _logits(self, model: BORADrugInteraction, rows: np.ndarray, labels: torch.Tensor,
                 observed: torch.Tensor) -> torch.Tensor:
         index = torch.as_tensor(rows, dtype=torch.long, device=self.device)
         left, right = self.left[index], self.right[index]
@@ -155,7 +155,7 @@ class Trainer:
         return float(full_weight)
 
     @torch.inference_mode()
-    def predict(self, model: BiAxWestern, rows: np.ndarray, labels: torch.Tensor,
+    def predict(self, model: BORADrugInteraction, rows: np.ndarray, labels: torch.Tensor,
                 observed: torch.Tensor, batch_size: int) -> np.ndarray:
         model.eval()
         output = []
@@ -167,7 +167,7 @@ class Trainer:
 
     def fit(self, train_rows: np.ndarray, validation_rows: np.ndarray, seed: int,
             max_epochs: int = 30, patience: int = 5, batch_size: int = 8192,
-            negative_ratio: int = 4) -> tuple[BiAxWestern, torch.Tensor, torch.Tensor, list[dict]]:
+            negative_ratio: int = 4) -> tuple[BORADrugInteraction, torch.Tensor, torch.Tensor, list[dict]]:
         model = self.new_model(seed)
         labels, observed = self.memory(train_rows)
         optimizer = torch.optim.AdamW(model.parameters(), lr=3e-3, weight_decay=1e-2)
@@ -228,7 +228,7 @@ class Trainer:
         model.eval()
         return model, labels, observed, history
 
-    def evaluate(self, model: BiAxWestern, labels: torch.Tensor, observed: torch.Tensor,
+    def evaluate(self, model: BORADrugInteraction, labels: torch.Tensor, observed: torch.Tensor,
                  validation_rows: np.ndarray, test_rows: np.ndarray,
                  batch_size: int) -> tuple[
                      dict, np.ndarray, np.ndarray, np.ndarray, np.ndarray, float | None

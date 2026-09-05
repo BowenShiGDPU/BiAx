@@ -1,15 +1,17 @@
-# BiAx
+# BORA
 
-BiAx is a shared bi-axis architecture for Formula - ADR, Drug - drug interaction,
-Drug pair - ADR, and Herb - drug interaction prediction. The repository contains
-the four task instances and their task-specific conditional experts. Each run
-trains one model. No model ensembling is used.
+Code for **Predicting Medication Interactions and Adverse Reactions from
+Biomedical Context and Observed Relations**.
+
+BORA combines biomedical context with observed relations to predict
+Formula–ADR associations, drug–drug interactions, drug pair–ADR associations,
+and herb–drug interactions. Each task is trained separately. The repository
+includes the four model implementations, task-specific prediction components,
+data loaders, evaluation splits, and herb–drug model parameters.
 
 ## Installation
 
-Python 3.12 and PyTorch 2.9 are required. The package also declares its numeric
-and table dependencies. Install the package and its test dependency in a clean
-environment:
+Use Python 3.12 or later and PyTorch 2.9. Install the package and tests:
 
 ```bash
 python -m pip install -e '.[test]'
@@ -18,9 +20,10 @@ python -m pytest
 
 ## Data
 
-The repository includes every protocol split used by the model. Place the
-companion BiAx data deposit under `data/` so that each task directory also has
-its `inputs`, `entities`, and `labels` directories. The expected layout is:
+Extract `BORA_data_and_supporting_tables.tar.gz` and copy the four directories
+under `bora_data_and_tables/datasets/` into this repository's `data/` directory.
+The directories contain the numerical inputs, entity registries, labels and
+evaluation splits:
 
 ```text
 data/
@@ -30,32 +33,38 @@ data/
   herb_drug_interaction/
 ```
 
-The public loaders accept the corresponding task directory as `data_root`.
+Each loader accepts its task directory as `data_root`. The companion archive
+also contains machine-readable results and figure source data. See its
+`DATA_DICTIONARY.md` and `SOURCES_AND_RIGHTS.md` for schemas and source licences.
 
-## Herb - drug interaction reproduction
+## Reproduce herb–drug interaction results
 
-The per-seed core and router checkpoints, route strengths, and expected metrics
-are included under `parameters/herb_drug_interaction/`. After placing the
-companion data deposit under `data/`, reproduce all three protocols and ten
-seeds with:
+The parameters for three protocols and ten seeds are in
+`parameters/herb_drug_interaction/`. Evaluate them with:
 
 ```bash
-biax-reproduce-herb-drug \
+bora-reproduce-herb-drug \
   --data-root data/herb_drug_interaction \
   --parameter-root parameters/herb_drug_interaction \
   --device cuda:0 \
   --output herb_drug_reproduction.json
 ```
 
-The command evaluates the released checkpoints on the released partitions,
-selects each decision threshold from validation data, and checks the displayed
-mean and standard deviation for every protocol and metric against the included
-result record. Per-seed differences are retained in the reproduction report.
+The command loads the supplied parameters, selects decision thresholds on
+validation data, and compares test-set means and standard deviations with the
+included results. It does not retrain the models.
 
-## Minimal checks
+## Tests
 
-`pytest` runs a forward pass for every task instance, verifies symmetry of the
-drug-pair encoder, and checks both invariants of the herb-support router. Set
-`BIAX_HERB_DRUG_DATA` to the herb-drug data directory to include the complete
-30-run reproduction test. Model outputs are logits; decision thresholds are
-selected using the validation partition only.
+The tests cover forward passes for all four tasks, drug-pair symmetry and
+support-dependent herb–drug routing. Set `BORA_HERB_DRUG_DATA` to the herb–drug
+data directory to include the complete 30-run reproduction test. Set
+`BORA_DEVICE` to select a device; the default is `cpu`.
+
+Model outputs are logits. Decision thresholds are selected on validation
+partitions, not test partitions.
+
+## Licence
+
+The code is available under the MIT licence. Third-party data remain subject
+to the terms described in the companion archive.

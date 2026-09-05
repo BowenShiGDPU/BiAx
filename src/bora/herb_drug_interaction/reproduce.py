@@ -11,7 +11,7 @@ from sklearn.metrics import (average_precision_score, matthews_corrcoef,
 
 from .data import (Bundle, Split, load_bundle, load_constituents,
                    load_mechanism, load_split)
-from .model import BiAxHDI, Config
+from .model import BORAHerbDrug, Config
 from .unseen_herb_expert import UnseenHerbExpert
 
 
@@ -93,7 +93,7 @@ def _training_labels(split: Split, herb_index: np.ndarray,
 
 
 @torch.no_grad()
-def _score(model: BiAxHDI, expert: UnseenHerbExpert, bundle: Bundle,
+def _score(model: BORAHerbDrug, expert: UnseenHerbExpert, bundle: Bundle,
            split: Split, constituents: np.lib.npyio.NpzFile,
            mechanism: np.ndarray, alpha: float, device: torch.device,
            rows: np.ndarray, batch_size: int = 100_000) -> np.ndarray:
@@ -120,7 +120,7 @@ def _score(model: BiAxHDI, expert: UnseenHerbExpert, bundle: Bundle,
         constituent_tensor, constituent_mask)
     _, drug_state = model.encode_drug(
         semantic_drug, graph_drug, structure_drug)
-    memory = model.label_memory(
+    memory = model.retrieve_relations(
         herb_state, drug_state, torch.from_numpy(labels).to(device),
         torch.from_numpy(observed).to(device))
 
@@ -161,7 +161,7 @@ def reproduce_run(data_root: str | Path, parameter_root: str | Path,
         raise ValueError("constituent tensor is not aligned with herb entities")
 
     torch_device = torch.device(device)
-    model = BiAxHDI(len(herb_rows), len(drug_rows),
+    model = BORAHerbDrug(len(herb_rows), len(drug_rows),
                     PROTOCOL_CONFIGS[protocol]).to(torch_device)
     expert = UnseenHerbExpert(
         PROTOCOL_CONFIGS[protocol].semantic_dim +

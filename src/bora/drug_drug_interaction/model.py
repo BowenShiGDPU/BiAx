@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import torch
 from torch import nn
 
-from .memory import BiAxisMemory
+from .retrieval import ObservedRelationRetrieval
 
 
 @dataclass(frozen=True)
@@ -143,8 +143,8 @@ class DirectedPairEncoder(nn.Module):
         return self.mix(torch.cat([left, right, left * right, left - right], dim=-1))
 
 
-class BiAxWestern(nn.Module):
-    """Unified BiAx adaptation for single-drug ADR and DDI endpoints."""
+class BORADrugInteraction(nn.Module):
+    """BORA drug encoder and prediction heads for binary and endpoint labels."""
 
     VALID_TASKS = {"single_adr", "ddi_binary", "ddi_type86"}
 
@@ -165,7 +165,7 @@ class BiAxWestern(nn.Module):
         self.single_readout = ConditionalReadout(self.cfg) if task == "single_adr" else None
         self.symmetric_pair = SymmetricPairEncoder(self.cfg) if task == "ddi_binary" else None
         self.directed_pair = DirectedPairEncoder(self.cfg) if task == "ddi_type86" else None
-        self.memory = BiAxisMemory(
+        self.memory = ObservedRelationRetrieval(
             d, self.cfg.memory_topk_left, self.cfg.memory_topk_right,
             self.cfg.memory_tau_init,
         )

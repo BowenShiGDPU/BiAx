@@ -1,1359 +1,1359 @@
-endpoint_index	meddra_pt_code	meddra_pt_name	positive_frequency_decile	split
-0	10000059	Abdominal discomfort	5	validation
-1	10000060	Abdominal distension	8	training
-2	10000077	Abdominal mass	1	test
-3	10000081	Abdominal pain	9	training
-4	10000084	Abdominal pain lower	3	training
-5	10000087	Abdominal pain upper	8	training
-6	10000097	Abdominal tenderness	4	training
-7	10000125	Abnormal dreams	2	test
-8	10000234	Abortion spontaneous	1	training
-9	10000269	Abscess	6	training
-10	10000381	Accidental overdose	4	training
-11	10000486	Acidosis	6	training
-12	10000496	Acne	0	training
-13	10000614	Actinic keratosis	3	training
-14	10000620	Actinomycosis	3	training
-15	10000636	Activated partial thromboplastin time prolonged	5	training
-16	10000804	Acute hepatic failure	3	training
-17	10000880	Acute myeloid leukaemia	6	test
-18	10000891	Acute myocardial infarction	8	training
-19	10001017	Acute prerenal failure	4	training
-20	10001029	Acute pulmonary oedema	5	training
-21	10001052	Acute respiratory distress syndrome	7	training
-22	10001053	Acute respiratory failure	8	test
-23	10001076	Acute sinusitis	5	training
-24	10001367	Adrenal insufficiency	5	test
-25	10001443	Affective disorder	4	training
-26	10001488	Aggression	7	training
-27	10001497	Agitation	8	training
-28	10001507	Agranulocytosis	7	test
-29	10001540	Akathisia	3	validation
-30	10001551	Alanine aminotransferase increased	9	validation
-31	10001584	Alcohol abuse	1	training
-32	10001639	Alcoholism	0	training
-33	10001760	Alopecia	7	training
-34	10001854	Altered state of consciousness	7	training
-35	10001889	Alveolitis	0	training
-36	10001949	Amnesia	7	training
-37	10002034	Anaemia	9	test
-38	10002064	Anaemia macrocytic	0	training
-39	10002073	Anaemia of chronic disease	1	training
-40	10002198	Anaphylactic reaction	6	test
-41	10002199	Anaphylactic shock	3	training
-42	10002329	Aneurysm	1	training
-43	10002368	Anger	5	training
-44	10002383	Angina pectoris	9	test
-45	10002388	Angina unstable	8	test
-46	10002424	Angioedema	5	training
-47	10002511	Anhedonia	9	validation
-48	10002544	Ankle fracture	6	training
-49	10002646	Anorexia	6	training
-50	10002847	Anuria	5	training
-51	10002855	Anxiety	9	training
-52	10002882	Aortic aneurysm	6	training
-53	10002906	Aortic stenosis	6	training
-54	10002915	Aortic valve incompetence	8	validation
-55	10002917	Aortic valve sclerosis	3	training
-56	10002918	Aortic valve stenosis	1	training
-57	10002942	Apathy	1	training
-58	10002948	Aphasia	6	training
-59	10002965	Aplasia pure red cell	1	training
-60	10002967	Aplastic anaemia	0	test
-61	10002974	Apnoea	3	training
-62	10003084	Areflexia	1	validation
-63	10003119	Arrhythmia	7	training
-64	10003130	Arrhythmia supraventricular	0	training
-65	10003210	Arteriosclerosis	9	training
-66	10003211	Arteriosclerosis coronary artery	8	training
-67	10003239	Arthralgia	9	training
-68	10003246	Arthritis	9	validation
-69	10003285	Arthropathy	8	validation
-70	10003399	Arthropod bite	3	training
-71	10003445	Ascites	8	training
-72	10003481	Aspartate aminotransferase increased	9	training
-73	10003488	Aspergillosis	2	validation
-74	10003504	Aspiration	7	training
-75	10003549	Asthenia	9	test
-76	10003553	Asthma	9	validation
-77	10003591	Ataxia	6	training
-78	10003598	Atelectasis	9	test
-79	10003658	Atrial fibrillation	9	training
-80	10003662	Atrial flutter	7	training
-81	10003668	Atrial tachycardia	3	training
-82	10003671	Atrioventricular block	4	training
-83	10003673	Atrioventricular block complete	5	training
-84	10003674	Atrioventricular block first degree	7	validation
-85	10003677	Atrioventricular block second degree	1	test
-86	10003694	Atrophy	1	test
-87	10003736	Attention deficit/hyperactivity disorder	2	training
-88	10003885	Azotaemia	7	validation
-89	10003983	Back disorder	5	test
-90	10003986	Back injury	5	training
-91	10003988	Back pain	9	test
-92	10003997	Bacteraemia	7	training
-93	10004137	Barrett's oesophagus	3	validation
-94	10004146	Basal cell carcinoma	6	training
-95	10004446	Benign prostatic hyperplasia	6	test
-96	10004663	Biliary colic	0	training
-97	10004939	Bipolar I disorder	2	training
-98	10005169	Blindness	2	training
-99	10005191	Blister	6	training
-100	10005287	Blood albumin decreased	7	training
-101	10005328	Blood amylase increased	0	validation
-102	10005364	Blood bilirubin increased	8	test
-103	10005395	Blood calcium decreased	6	training
-104	10005396	Blood calcium increased	1	training
-105	10005419	Blood chloride decreased	5	validation
-106	10005423	Blood cholesterol abnormal	1	training
-107	10005425	Blood cholesterol increased	9	training
-108	10005464	Blood creatine increased	2	test
-109	10005470	Blood creatine phosphokinase increased	7	training
-110	10005483	Blood creatinine increased	9	validation
-111	10005488	Blood culture positive	5	test
-112	10005554	Blood glucose abnormal	1	test
-113	10005555	Blood glucose decreased	6	test
-114	10005557	Blood glucose increased	8	training
-115	10005619	Blood iron decreased	1	test
-116	10005630	Blood lactate dehydrogenase increased	7	training
-117	10005654	Blood magnesium decreased	6	validation
-118	10005724	Blood potassium decreased	8	training
-119	10005725	Blood potassium increased	7	training
-120	10005734	Blood pressure decreased	8	training
-121	10005737	Blood pressure diastolic decreased	3	test
-122	10005746	Blood pressure fluctuation	3	test
-123	10005750	Blood pressure increased	7	test
-124	10005760	Blood pressure systolic increased	5	training
-125	10005802	Blood sodium decreased	8	training
-126	10005839	Blood triglycerides increased	8	training
-127	10005851	Blood urea increased	9	test
-128	10005861	Blood uric acid increased	2	test
-129	10005911	Body temperature increased	2	training
-130	10005956	Bone disorder	9	training
-131	10006002	Bone pain	8	training
-132	10006093	Bradycardia	9	training
-133	10006187	Breast cancer	3	test
-134	10006272	Breast mass	5	test
-135	10006326	Breath odour	0	training
-136	10006445	Bronchiectasis	3	test
-137	10006451	Bronchitis	9	training
-138	10006458	Bronchitis chronic	3	validation
-139	10006469	Bronchopneumonia	6	training
-140	10006473	Bronchopulmonary aspergillosis	4	training
-141	10006482	Bronchospasm	6	test
-142	10006514	Bruxism	3	training
-143	10006578	Bundle branch block	0	validation
-144	10006580	Bundle branch block left	7	training
-145	10006582	Bundle branch block right	6	test
-146	10006784	Burning sensation	5	validation
-147	10006811	Bursitis	8	training
-148	10006825	C-reactive protein increased	8	test
-149	10006895	Cachexia	5	training
-150	10006924	Caesarean section	2	training
-151	10006956	Calcium deficiency	3	test
-152	10007152	Candidiasis	7	training
-153	10007515	Cardiac arrest	8	test
-154	10007554	Cardiac failure	9	training
-155	10007556	Cardiac failure acute	3	training
-156	10007558	Cardiac failure chronic	1	training
-157	10007559	Cardiac failure congestive	9	test
-158	10007586	Cardiac murmur	8	training
-159	10007598	Cardiac pacemaker insertion	2	training
-160	10007610	Cardiac tamponade	1	training
-161	10007617	Cardio-respiratory arrest	8	training
-162	10007625	Cardiogenic shock	6	validation
-163	10007632	Cardiomegaly	9	training
-164	10007636	Cardiomyopathy	8	training
-165	10007687	Carotid artery stenosis	7	test
-166	10007697	Carpal tunnel syndrome	8	test
-167	10007739	Cataract	8	training
-168	10007810	Catheter related infection	1	training
-169	10007815	Catheterisation cardiac	3	training
-170	10007882	Cellulitis	9	training
-171	10008096	Cerebral atrophy	7	test
-172	10008111	Cerebral haemorrhage	6	test
-173	10008118	Cerebral infarction	7	training
-174	10008120	Cerebral ischaemia	5	training
-175	10008190	Cerebrovascular accident	8	training
-176	10008196	Cerebrovascular disorder	0	training
-177	10008313	Cervical spinal stenosis	4	training
-178	10008469	Chest discomfort	8	training
-179	10008479	Chest pain	9	training
-180	10008499	Chest X-ray abnormal	5	test
-181	10008531	Chills	7	training
-182	10008589	Choking	2	training
-183	10008604	Cholangitis	0	test
-184	10008611	Cholecystectomy	4	training
-185	10008612	Cholecystitis	7	training
-186	10008614	Cholecystitis acute	4	training
-187	10008617	Cholecystitis chronic	7	training
-188	10008629	Cholelithiasis	9	training
-189	10008635	Cholestasis	7	training
-190	10008748	Chorea	1	training
-191	10008796	Chromaturia	2	training
-192	10009033	Chronic obstructive pulmonary disease	9	training
-193	10009137	Chronic sinusitis	5	training
-194	10009192	Circulatory collapse	6	test
-195	10009245	Clavicle fracture	1	training
-196	10009657	Clostridium difficile colitis	8	training
-197	10009802	Coagulopathy	8	test
-198	10009866	Cold sweat	3	training
-199	10009887	Colitis	7	training
-200	10009895	Colitis ischaemic	5	training
-201	10009900	Colitis ulcerative	2	training
-202	10009944	Colon cancer	1	test
-203	10010003	Colonic polyp	6	training
-204	10010071	Coma	7	test
-205	10010144	Completed suicide	7	training
-206	10010185	Complications of transplanted kidney	1	training
-207	10010214	Compression fracture	7	training
-208	10010235	Computerised tomogram abnormal	6	validation
-209	10010254	Concussion	1	training
-210	10010264	Condition aggravated	8	training
-211	10010276	Conduction disorder	1	training
-212	10010305	Confusional state	9	training
-213	10010719	Conjunctival haemorrhage	0	validation
-214	10010741	Conjunctivitis	6	training
-215	10010774	Constipation	9	training
-216	10010904	Convulsion	8	training
-217	10010947	Coordination abnormal	4	training
-218	10010968	Cor pulmonale	1	validation
-219	10011078	Coronary artery disease	9	training
-220	10011086	Coronary artery occlusion	6	training
-221	10011089	Coronary artery stenosis	7	test
-222	10011219	Costochondritis	2	validation
-223	10011224	Cough	9	validation
-224	10011372	Creatinine renal clearance decreased	1	validation
-225	10011376	Crepitations	3	training
-226	10011401	Crohn's disease	5	training
-227	10011469	Crying	3	training
-228	10011640	Culture urine positive	2	training
-229	10011703	Cyanosis	5	test
-230	10011732	Cyst	4	training
-231	10011781	Cystitis	6	test
-232	10011793	Cystitis haemorrhagic	1	training
-233	10011831	Cytomegalovirus infection	6	test
-234	10011878	Deafness	7	test
-235	10011891	Deafness neurosensory	2	training
-236	10011906	Death	5	training
-237	10011953	Decreased activity	0	training
-238	10011971	Decreased interest	6	training
-239	10011985	Decubitus ulcer	7	test
-240	10012174	Dehydration	9	training
-241	10012218	Delirium	8	training
-242	10012239	Delusion	5	training
-243	10012267	Dementia	7	test
-244	10012271	Dementia Alzheimer's type	3	training
-245	10012305	Demyelination	1	training
-246	10012318	Dental caries	8	training
-247	10012335	Dependence	2	test
-248	10012373	Depressed level of consciousness	8	test
-249	10012374	Depressed mood	5	training
-250	10012378	Depression	9	training
-251	10012426	Dermal cyst	1	validation
-252	10012431	Dermatitis	6	training
-253	10012432	Dermatitis acneiform	0	training
-254	10012441	Dermatitis bullous	2	test
-255	10012442	Dermatitis contact	0	test
-256	10012455	Dermatitis exfoliative	4	training
-257	10012601	Diabetes mellitus	9	training
-258	10012607	Diabetes mellitus inadequate control	9	training
-259	10012613	Diabetes mellitus non-insulin-dependent	4	validation
-260	10012650	Diabetic coma	5	training
-261	10012671	Diabetic ketoacidosis	7	training
-262	10012680	Diabetic neuropathy	8	training
-263	10012689	Diabetic retinopathy	5	training
-264	10012735	Diarrhoea	9	test
-265	10012794	Difficulty in walking	2	training
-266	10013002	Dilatation atrial	5	test
-267	10013012	Dilatation ventricular	6	training
-268	10013036	Diplopia	6	training
-269	10013050	Disability	7	training
-270	10013082	Discomfort	3	training
-271	10013395	Disorientation	7	training
-272	10013442	Disseminated intravascular coagulation	8	training
-273	10013496	Disturbance in attention	6	training
-274	10013538	Diverticulitis	8	training
-275	10013554	Diverticulum	9	training
-276	10013559	Diverticulum intestinal	6	training
-277	10013573	Dizziness	9	training
-278	10013578	Dizziness postural	1	training
-279	10013654	Drug abuse	5	training
-280	10013663	Drug dependence	7	test
-281	10013678	Drug effect decreased	2	test
-282	10013687	Drug eruption	5	training
-283	10013700	Drug hypersensitivity	8	training
-284	10013709	Drug ineffective	4	training
-285	10013710	Drug interaction	9	training
-286	10013722	Drug level increased	5	training
-287	10013746	Drug toxicity	7	training
-288	10013754	Drug withdrawal syndrome	6	training
-289	10013774	Dry eye	4	test
-290	10013781	Dry mouth	8	training
-291	10013786	Dry skin	6	training
-292	10013836	Duodenal ulcer	4	training
-293	10013839	Duodenal ulcer haemorrhage	0	training
-294	10013864	Duodenitis	6	test
-295	10013886	Dysaesthesia	2	training
-296	10013887	Dysarthria	8	test
-297	10013911	Dysgeusia	6	validation
-298	10013916	Dyskinesia	8	training
-299	10013946	Dyspepsia	9	test
-300	10013950	Dysphagia	9	training
-301	10013952	Dysphonia	7	test
-302	10013968	Dyspnoea	9	test
-303	10013971	Dyspnoea exertional	9	training
-304	10013974	Dyspnoea paroxysmal nocturnal	2	test
-305	10013983	Dystonia	4	test
-306	10013990	Dysuria	8	training
-307	10014011	Ear infection	2	training
-308	10014020	Ear pain	8	test
-309	10014062	Eating disorder	4	training
-310	10014080	Ecchymosis	7	training
-311	10014184	Eczema	6	training
-312	10014363	Electrocardiogram abnormal	6	training
-313	10014380	Electrocardiogram QRS complex prolonged	0	validation
-314	10014387	Electrocardiogram QT prolonged	7	training
-315	10014391	Electrocardiogram ST segment depression	2	test
-316	10014392	Electrocardiogram ST segment elevation	0	training
-317	10014408	Electroencephalogram abnormal	0	validation
-318	10014418	Electrolyte imbalance	7	test
-319	10014498	Embolic stroke	0	validation
-320	10014551	Emotional disorder	8	test
-321	10014561	Emphysema	8	training
-322	10014581	Encephalitis	1	training
-323	10014625	Encephalopathy	8	training
-324	10014665	Endocarditis	3	training
-325	10014866	Enteritis	2	training
-326	10014893	Enterocolitis	3	test
-327	10014945	Eosinophil count increased	2	test
-328	10014950	Eosinophilia	6	test
-329	10015037	Epilepsy	4	training
-330	10015090	Epistaxis	8	training
-331	10015108	Epstein-Barr virus infection	1	training
-332	10015137	Eructation	2	training
-333	10015145	Erysipelas	0	training
-334	10015150	Erythema	7	training
-335	10015218	Erythema multiforme	2	test
-336	10015296	Escherichia sepsis	1	training
-337	10015488	Essential hypertension	6	training
-338	10015688	Exostosis	8	training
-339	10015832	Extrapyramidal disorder	7	training
-340	10015856	Extrasystoles	2	validation
-341	10015916	Eye disorder	0	training
-342	10015946	Eye irritation	0	test
-343	10015958	Eye pain	2	training
-344	10015995	Eyelid ptosis	1	training
-345	10016029	Face oedema	4	training
-346	10016042	Facial bones fracture	1	training
-347	10016059	Facial pain	5	validation
-348	10016092	Faecal incontinence	5	training
-349	10016100	Faeces discoloured	3	test
-350	10016165	Failure to thrive	6	training
-351	10016173	Fall	9	training
-352	10016215	Family stress	3	training
-353	10016256	Fatigue	9	training
-354	10016275	Fear	8	training
-355	10016288	Febrile neutropenia	9	training
-356	10016322	Feeling abnormal	5	test
-357	10016326	Feeling cold	0	training
-358	10016330	Feeling drunk	0	training
-359	10016334	Feeling hot	4	training
-360	10016338	Feeling jittery	3	training
-361	10016450	Femoral neck fracture	1	validation
-362	10016454	Femur fracture	4	test
-363	10016581	Fibrin D dimer increased	1	training
-364	10016642	Fibrosis	6	test
-365	10016667	Fibula fracture	2	training
-366	10016717	Fistula	4	training
-367	10016750	Flank pain	7	test
-368	10016759	Flat affect	0	test
-369	10016766	Flatulence	5	training
-370	10016803	Fluid overload	8	training
-371	10016807	Fluid retention	7	training
-372	10016825	Flushing	6	validation
-373	10016970	Foot fracture	8	validation
-374	10017062	Formication	0	training
-375	10017367	Frequent bowel movements	0	validation
-376	10017413	Full blood count decreased	2	training
-377	10017533	Fungal infection	7	training
-378	10017577	Gait disturbance	9	training
-379	10017626	Gallbladder disorder	7	test
-380	10017642	Gallbladder injury	0	training
-381	10017693	Gamma-glutamyltransferase increased	8	training
-382	10017711	Gangrene	2	training
-383	10017817	Gastric polyps	0	training
-384	10017822	Gastric ulcer	7	training
-385	10017826	Gastric ulcer haemorrhage	3	test
-386	10017853	Gastritis	9	training
-387	10017865	Gastritis erosive	5	training
-388	10017885	Gastrooesophageal reflux disease	9	training
-389	10017888	Gastroenteritis	8	training
-390	10017918	Gastroenteritis viral	4	training
-391	10017944	Gastrointestinal disorder	2	training
-392	10017955	Gastrointestinal haemorrhage	9	training
-393	10018075	Generalised anxiety disorder	1	training
-394	10018092	Generalised oedema	6	training
-395	10018276	Gingival bleeding	6	training
-396	10018280	Gingival disorder	2	training
-397	10018286	Gingival pain	4	training
-398	10018290	Gingival recession	2	training
-399	10018291	Gingival swelling	3	training
-400	10018292	Gingivitis	6	training
-401	10018304	Glaucoma	7	training
-402	10018358	Glomerular filtration rate decreased	4	training
-403	10018388	Glossodynia	2	training
-404	10018429	Glucose tolerance impaired	6	training
-405	10018484	Glycosylated haemoglobin increased	5	training
-406	10018498	Goitre	3	training
-407	10018627	Gout	7	training
-408	10018651	Graft versus host disease	4	training
-409	10018659	Grand mal convulsion	5	training
-410	10018687	Granulocytopenia	2	training
-411	10018691	Granuloma	1	test
-412	10018735	Groin pain	4	training
-413	10018800	Gynaecomastia	4	training
-414	10018814	Haemangioma	0	training
-415	10018830	Haematemesis	7	test
-416	10018836	Haematochezia	7	validation
-417	10018838	Haematocrit decreased	9	validation
-418	10018852	Haematoma	8	training
-419	10018867	Haematuria	9	training
-420	10018870	Blood urine present	2	training
-421	10018875	Haemodialysis	7	training
-422	10018884	Haemoglobin decreased	9	training
-423	10018910	Haemolysis	1	training
-424	10018916	Haemolytic anaemia	4	training
-425	10018932	Haemolytic uraemic syndrome	0	training
-426	10018964	Haemoptysis	8	training
-427	10018985	Haemorrhage intracranial	4	training
-428	10019016	Haemorrhagic stroke	1	validation
-429	10019022	Haemorrhoids	9	training
-430	10019063	Hallucination	7	training
-431	10019070	Hallucination, auditory	6	training
-432	10019075	Hallucination, visual	6	training
-433	10019079	Hallucinations, mixed	0	training
-434	10019114	Hand fracture	4	test
-435	10019196	Head injury	7	training
-436	10019211	Headache	8	training
-437	10019301	Heart rate decreased	6	training
-438	10019303	Heart rate increased	6	training
-439	10019304	Heart rate irregular	8	training
-440	10019465	Hemiparesis	6	test
-441	10019468	Hemiplegia	1	test
-442	10019641	Hepatic cirrhosis	4	test
-443	10019645	Hepatic congestion	0	training
-444	10019646	Hepatic cyst	6	training
-445	10019660	Hepatic encephalopathy	4	training
-446	10019663	Hepatic failure	7	validation
-447	10019670	Hepatic function abnormal	8	validation
-448	10019692	Hepatic necrosis	0	test
-449	10019708	Hepatic steatosis	9	validation
-450	10019717	Hepatitis	6	test
-451	10019727	Hepatitis acute	2	training
-452	10019731	Hepatitis B	1	training
-453	10019744	Hepatitis C	4	training
-454	10019754	Hepatitis cholestatic	3	test
-455	10019772	Hepatitis fulminant	2	validation
-456	10019837	Hepatocellular injury	5	training
-457	10019842	Hepatomegaly	6	test
-458	10019847	Hepatosplenomegaly	0	training
-459	10019851	Hepatotoxicity	4	validation
-460	10019909	Hernia	2	training
-461	10019948	Herpes simplex	3	validation
-462	10019973	Herpes virus infection	0	training
-463	10019974	Herpes zoster	8	test
-464	10020028	Hiatus hernia	9	test
-465	10020039	Hiccups	1	validation
-466	10020060	High density lipoprotein decreased	0	training
-467	10020096	Hip arthroplasty	2	training
-468	10020100	Hip fracture	6	validation
-469	10020462	Humerus fracture	4	test
-470	10020508	Hydrocephalus	0	training
-471	10020524	Hydronephrosis	5	validation
-472	10020568	Hyperaesthesia	0	validation
-473	10020578	Hyperbilirubinaemia	5	training
-474	10020583	Hypercalcaemia	7	training
-475	10020591	Hypercapnia	1	training
-476	10020603	Hypercholesterolaemia	8	training
-477	10020608	Hypercoagulation	0	test
-478	10020635	Hyperglycaemia	9	training
-479	10020642	Hyperhidrosis	8	validation
-480	10020646	Hyperkalaemia	9	test
-481	10020649	Hyperkeratosis	5	training
-482	10020679	Hypernatraemia	3	training
-483	10020705	Hyperparathyroidism	2	training
-484	10020710	Hyperphagia	0	test
-485	10020745	Hyperreflexia	0	training
-486	10020751	Hypersensitivity	5	training
-487	10020765	Hypersomnia	5	training
-488	10020772	Hypertension	9	training
-489	10020802	Hypertensive crisis	3	training
-490	10020823	Hypertensive heart disease	5	test
-491	10020843	Hyperthermia	4	training
-492	10020850	Hyperthyroidism	4	training
-493	10020852	Hypertonia	1	test
-494	10020853	Hypertonic bladder	1	training
-495	10020869	Hypertriglyceridaemia	5	test
-496	10020903	Hyperuricaemia	4	training
-497	10020910	Hyperventilation	0	training
-498	10020937	Hypoaesthesia	9	training
-499	10020942	Hypoalbuminaemia	6	test
-500	10020947	Hypocalcaemia	7	test
-501	10020983	Hypogammaglobulinaemia	1	test
-502	10020993	Hypoglycaemia	9	training
-503	10021000	Hypoglycaemic coma	0	training
-504	10021015	Hypokalaemia	9	training
-505	10021021	Hypokinesia	3	training
-506	10021027	Hypomagnesaemia	8	training
-507	10021030	Hypomania	0	training
-508	10021036	Hyponatraemia	9	test
-509	10021058	Hypophosphataemia	4	test
-510	10021089	Hyporeflexia	0	training
-511	10021097	Hypotension	9	training
-512	10021113	Hypothermia	3	training
-513	10021114	Hypothyroidism	8	training
-514	10021118	Hypotonia	1	training
-515	10021133	Hypoventilation	1	training
-516	10021137	Hypovolaemia	7	training
-517	10021138	Hypovolaemic shock	2	test
-518	10021143	Hypoxia	9	training
-519	10021328	Ileus	7	training
-520	10021333	Ileus paralytic	4	validation
-521	10021518	Impaired gastric emptying	7	training
-522	10021519	Impaired healing	8	training
-523	10021576	Inadequate analgesia	3	training
-524	10021597	Inappropriate schedule of drug administration	3	training
-525	10021630	Incoherent	1	test
-526	10021639	Incontinence	5	training
-527	10021654	Increased appetite	3	training
-528	10021688	Increased tendency to bruise	3	validation
-529	10021789	Infection	8	validation
-530	10022000	Influenza	5	training
-531	10022004	Influenza like illness	5	training
-532	10022013	Ingrowing nail	1	training
-533	10022016	Inguinal hernia	2	training
-534	10022052	Injection site bruising	4	training
-535	10022061	Injection site erythema	3	training
-536	10022067	Injection site haemorrhage	3	training
-537	10022086	Injection site pain	3	training
-538	10022093	Injection site pruritus	1	validation
-539	10022107	Injection site urticaria	0	training
-540	10022116	Injury	9	validation
-541	10022437	Insomnia	9	test
-542	10022523	Intentional overdose	5	test
-543	10022524	Intentional self-injury	2	training
-544	10022562	Intermittent claudication	5	training
-545	10022594	International normalised ratio decreased	3	training
-546	10022595	International normalised ratio increased	9	training
-547	10022611	Interstitial lung disease	8	training
-548	10022680	Intestinal ischaemia	4	training
-549	10022687	Intestinal obstruction	6	training
-550	10022694	Intestinal perforation	2	training
-551	10022972	Iron deficiency anaemia	7	training
-552	10022998	Irritability	5	test
-553	10023003	Irritable bowel syndrome	7	test
-554	10023126	Jaundice	7	validation
-555	10023129	Jaundice cholestatic	1	training
-556	10023149	Jaw fracture	3	training
-557	10023201	Joint contracture	2	training
-558	10023204	Joint dislocation	6	test
-559	10023215	Joint effusion	6	test
-560	10023229	Joint sprain	3	validation
-561	10023230	Joint stiffness	6	training
-562	10023232	Joint swelling	8	training
-563	10023237	Jugular vein thrombosis	1	validation
-564	10023379	Ketoacidosis	1	training
-565	10023424	Kidney infection	2	training
-566	10023439	Kidney transplant rejection	2	training
-567	10023469	Knee arthroplasty	2	training
-568	10023509	Kyphosis	6	training
-569	10023547	Laboratory test abnormal	5	training
-570	10023567	Labyrinthitis	0	training
-571	10023572	Laceration	6	training
-572	10023644	Lacrimation increased	2	training
-573	10023676	Lactic acidosis	6	training
-574	10023804	Large intestine perforation	2	validation
-575	10023874	Laryngitis	3	training
-576	10024119	Left ventricular failure	2	training
-577	10024264	Lethargy	8	training
-578	10024378	Leukocytosis	8	training
-579	10024382	Leukoencephalopathy	1	training
-580	10024384	Leukopenia	9	training
-581	10024419	Libido decreased	1	training
-582	10024453	Ligament sprain	5	training
-583	10024570	Lip swelling	2	training
-584	10024574	Lipase increased	3	training
-585	10024612	Lipoma	1	training
-586	10024648	Livedo reticularis	0	training
-587	10024670	Liver disorder	7	validation
-588	10024690	Liver function test abnormal	7	training
-589	10024738	Lobar pneumonia	6	validation
-590	10024770	Local swelling	7	test
-591	10024774	Localised infection	4	training
-592	10024855	Loss of consciousness	8	test
-593	10024910	Low density lipoprotein increased	2	training
-594	10024968	Lower respiratory tract infection	6	training
-595	10025005	Lumbar spinal stenosis	7	training
-596	10025080	Lung consolidation	3	training
-597	10025082	Lung disorder	7	validation
-598	10025102	Lung infiltration	8	validation
-599	10025197	Lymphadenopathy	8	training
-600	10025205	Lymphadenopathy mediastinal	1	training
-601	10025256	Lymphocyte count decreased	6	training
-602	10025282	Lymphoedema	6	training
-603	10025310	Lymphoma	4	test
-604	10025327	Lymphopenia	5	training
-605	10025409	Macular degeneration	2	training
-606	10025482	Malaise	7	training
-607	10025650	Malignant melanoma	0	training
-608	10026749	Mania	5	training
-609	10026865	Mass	6	validation
-610	10026882	Mastication disorder	4	test
-611	10026923	Maternal drugs affecting foetus	0	validation
-612	10027091	Medication error	0	training
-613	10027141	Melaena	8	test
-614	10027145	Melanocytic naevus	2	training
-615	10027175	Memory impairment	7	training
-616	10027199	Meningitis	1	training
-617	10027374	Mental impairment	3	validation
-618	10027417	Metabolic acidosis	8	test
-619	10027452	Metastases to bone	8	training
-620	10027457	Metastases to liver	6	training
-621	10027458	Metastases to lung	5	training
-622	10027459	Metastases to lymph nodes	2	training
-623	10027468	Metastases to spine	6	training
-624	10027566	Micturition urgency	4	training
-625	10027590	Middle insomnia	2	test
-626	10027599	Migraine	8	validation
-627	10027646	Miosis	2	training
-628	10027727	Mitral valve incompetence	9	training
-629	10027730	Mitral valve prolapse	3	training
-630	10027940	Mood altered	2	test
-631	10027951	Mood swings	4	test
-632	10028024	Mouth haemorrhage	2	training
-633	10028034	Mouth ulceration	7	test
-634	10028035	Movement disorder	4	test
-635	10028116	Mucosal inflammation	8	test
-636	10028154	Multi-organ failure	9	training
-637	10028200	Multiple fractures	7	training
-638	10028224	Multiple injuries	8	training
-639	10028228	Multiple myeloma	5	training
-640	10028245	Multiple sclerosis	4	training
-641	10028289	Muscle atrophy	5	test
-642	10028309	Muscle haemorrhage	2	validation
-643	10028330	Muscle rigidity	4	training
-644	10028334	Muscle spasms	9	training
-645	10028335	Muscle spasticity	1	test
-646	10028347	Muscle twitching	5	training
-647	10028372	Muscular weakness	9	training
-648	10028391	Musculoskeletal pain	9	training
-649	10028411	Myalgia	7	training
-650	10028521	Mydriasis	2	training
-651	10028533	Myelodysplastic syndrome	6	training
-652	10028596	Myocardial infarction	8	training
-653	10028600	Myocardial ischaemia	8	training
-654	10028622	Myoclonus	6	training
-655	10028641	Myopathy	4	training
-656	10028653	Myositis	5	training
-657	10028735	Nasal congestion	7	training
-658	10028762	Nasal septum deviation	2	training
-659	10028810	Nasopharyngitis	4	test
-660	10028813	Nausea	9	training
-661	10028836	Neck pain	9	training
-662	10028851	Necrosis	0	training
-663	10028980	Neoplasm	0	training
-664	10028997	Neoplasm malignant	5	test
-665	10029148	Nephrolithiasis	8	test
-666	10029151	Nephropathy	3	training
-667	10029155	Nephropathy toxic	3	training
-668	10029159	Nephrosclerosis	1	training
-669	10029164	Nephrotic syndrome	2	training
-670	10029174	Nerve compression	1	test
-671	10029202	Nervous system disorder	2	training
-672	10029216	Nervousness	6	training
-673	10029223	Neuralgia	7	training
-674	10029240	Neuritis	1	test
-675	10029279	Neurogenic bladder	1	training
-676	10029282	Neuroleptic malignant syndrome	5	training
-677	10029328	Neuropathy	2	test
-678	10029331	Neuropathy peripheral	9	training
-679	10029350	Neurotoxicity	3	test
-680	10029354	Neutropenia	9	training
-681	10029366	Neutrophil count decreased	8	validation
-682	10029368	Neutrophil count increased	4	test
-683	10029410	Night sweats	6	training
-684	10029412	Nightmare	3	validation
-685	10029446	Nocturia	6	training
-686	10029470	Nodal rhythm	0	training
-687	10029547	Non-Hodgkin's lymphoma	1	training
-688	10029783	Normochromic normocytic anaemia	4	training
-689	10029816	Nuclear magnetic resonance imaging abnormal	1	training
-690	10029864	Nystagmus	0	training
-691	10029883	Obesity	9	training
-692	10029898	Obsessive-compulsive disorder	5	training
-693	10030041	Ocular hyperaemia	0	training
-694	10030094	Odynophagia	4	training
-695	10030095	Oedema	9	test
-696	10030124	Oedema peripheral	9	validation
-697	10030154	Oesophageal candidiasis	4	validation
-698	10030180	Oesophageal pain	0	training
-699	10030194	Oesophageal stenosis	2	training
-700	10030201	Oesophageal ulcer	1	test
-701	10030216	Oesophagitis	8	training
-702	10030302	Oliguria	4	test
-703	10030338	Onychomycosis	6	training
-704	10030963	Oral candidiasis	8	training
-705	10031009	Oral pain	7	training
-706	10031123	Orthopnoea	7	test
-707	10031127	Orthostatic hypotension	8	training
-708	10031149	Osteitis	5	training
-709	10031161	Osteoarthritis	9	test
-710	10031248	Osteolysis	6	training
-711	10031252	Osteomyelitis	9	validation
-712	10031264	Osteonecrosis	6	training
-713	10031282	Osteoporosis	9	training
-714	10031298	Osteosclerosis	6	training
-715	10033072	Otitis externa	1	validation
-716	10033078	Otitis media	5	training
-717	10033132	Ovarian cyst	3	training
-718	10033295	Overdose	7	training
-719	10033307	Overweight	2	training
-720	10033318	Oxygen saturation decreased	7	training
-721	10033371	Pain	9	training
-722	10033425	Pain in extremity	9	test
-723	10033433	Pain in jaw	9	training
-724	10033474	Pain of skin	1	training
-725	10033546	Pallor	5	training
-726	10033553	Palmar-plantar erythrodysaesthesia syndrome	5	training
-727	10033557	Palpitations	9	test
-728	10033609	Pancreatic carcinoma	3	training
-729	10033645	Pancreatitis	8	training
-730	10033647	Pancreatitis acute	8	training
-731	10033649	Pancreatitis chronic	4	training
-732	10033661	Pancytopenia	9	training
-733	10033664	Panic attack	6	training
-734	10033666	Panic disorder	3	training
-735	10033775	Paraesthesia	8	training
-736	10033799	Paralysis	1	training
-737	10033864	Paranoia	6	training
-738	10034010	Parkinsonism	4	training
-739	10034016	Paronychia	1	training
-740	10034156	Pathological fracture	7	training
-741	10034158	Pathological gambling	2	training
-742	10034263	Pelvic pain	1	training
-743	10034341	Peptic ulcer	6	training
-744	10034464	Periarthritis	0	training
-745	10034474	Pericardial effusion	8	validation
-746	10034484	Pericarditis	2	validation
-747	10034536	Periodontal disease	4	training
-748	10034539	Periodontitis	4	training
-749	10034568	Peripheral coldness	1	training
-750	10034576	Peripheral ischaemia	4	training
-751	10034620	Peripheral sensory neuropathy	2	training
-752	10034636	Peripheral vascular disorder	8	training
-753	10034674	Peritonitis	5	training
-754	10034701	Peroneal nerve palsy	2	test
-755	10034719	Personality change	0	test
-756	10034721	Personality disorder	1	training
-757	10034754	Petechiae	5	test
-758	10034829	Pharyngeal oedema	3	test
-759	10034835	Pharyngitis	7	validation
-760	10034844	Pharyngolaryngeal pain	1	training
-761	10034879	Phlebitis	4	training
-762	10034960	Photophobia	2	training
-763	10034972	Photosensitivity reaction	0	training
-764	10035155	Plantar fasciitis	3	training
-765	10035226	Plasma cell myeloma	6	training
-766	10035484	Plasmacytoma	0	test
-767	10035528	Platelet count decreased	9	training
-768	10035598	Pleural effusion	9	training
-769	10035600	Pleural fibrosis	5	training
-770	10035618	Pleurisy	3	training
-771	10035623	Pleuritic pain	4	test
-772	10035664	Pneumonia	9	validation
-773	10035669	Pneumonia aspiration	8	training
-774	10035717	Pneumonia klebsiella	0	validation
-775	10035734	Pneumonia staphylococcal	2	validation
-776	10035742	Pneumonitis	7	test
-777	10035759	Pneumothorax	7	training
-778	10036018	Pollakiuria	7	test
-779	10036067	Polydipsia	1	training
-780	10036105	Polyneuropathy	5	training
-781	10036142	Polyuria	3	test
-782	10036316	Post-traumatic stress disorder	5	test
-783	10036410	Postoperative wound infection	0	training
-784	10036556	Pregnancy	0	training
-785	10036590	Premature baby	3	training
-786	10036653	Presyncope	7	validation
-787	10036772	Proctalgia	3	test
-788	10036790	Productive cough	8	training
-789	10036807	Progressive multifocal leukoencephalopathy	3	training
-790	10036975	Prostatic specific antigen increased	2	training
-791	10036978	Prostatitis	0	training
-792	10037014	Protein total decreased	3	training
-793	10037032	Proteinuria	6	training
-794	10037063	Prothrombin time prolonged	7	training
-795	10037087	Pruritus	7	training
-796	10037128	Pseudomembranous colitis	2	training
-797	10037153	Psoriasis	3	test
-798	10037162	Psoriatic arthropathy	0	training
-799	10037211	Psychomotor hyperactivity	3	training
-800	10037313	Pulmonary alveolar haemorrhage	3	test
-801	10037368	Pulmonary congestion	8	training
-802	10037377	Pulmonary embolism	9	training
-803	10037383	Pulmonary fibrosis	8	training
-804	10037391	Pulmonary granuloma	2	training
-805	10037394	Pulmonary haemorrhage	4	training
-806	10037400	Pulmonary hypertension	9	test
-807	10037410	Pulmonary infarction	1	training
-808	10037423	Pulmonary oedema	9	training
-809	10037448	Pulmonary valve incompetence	4	training
-810	10037469	Pulse absent	4	training
-811	10037549	Purpura	5	training
-812	10037569	Purulent discharge	6	training
-813	10037596	Pyelonephritis	6	test
-814	10037660	Pyrexia	9	training
-815	10037779	Radiculopathy	5	training
-816	10037802	Radius fracture	3	training
-817	10037833	Rales	7	training
-818	10037844	Rash	7	training
-819	10037855	Rash erythematous	5	test
-820	10037858	Rash generalised	3	training
-821	10037867	Rash macular	3	test
-822	10037868	Rash maculo-papular	6	validation
-823	10037876	Rash papular	3	training
-824	10037884	Rash pruritic	4	training
-825	10037888	Rash pustular	1	training
-826	10038063	Rectal haemorrhage	8	training
-827	10038153	Red blood cell count decreased	7	validation
-828	10038263	Reflux oesophagitis	1	training
-829	10038378	Renal artery stenosis	3	validation
-830	10038381	Renal atrophy	2	training
-831	10038423	Renal cyst	8	training
-832	10038428	Renal disorder	7	training
-833	10038435	Renal failure	9	training
-834	10038436	Renal failure acute	9	training
-835	10038444	Renal failure chronic	9	test
-836	10038537	Renal tubular disorder	1	training
-837	10038540	Renal tubular necrosis	7	test
-838	10038642	Resorption bone increased	0	training
-839	10038661	Respiratory acidosis	3	training
-840	10038669	Respiratory arrest	6	test
-841	10038678	Respiratory depression	4	training
-842	10038683	Respiratory disorder	3	test
-843	10038687	Respiratory distress	8	training
-844	10038695	Respiratory failure	9	training
-845	10038712	Respiratory rate increased	4	test
-846	10038743	Restlessness	6	training
-847	10038776	Retching	4	training
-848	10038867	Retinal haemorrhage	0	test
-849	10038980	Retroperitoneal haemorrhage	1	training
-850	10039020	Rhabdomyolysis	8	training
-851	10039073	Rheumatoid arthritis	7	test
-852	10039083	Rhinitis	6	training
-853	10039085	Rhinitis allergic	8	test
-854	10039101	Rhinorrhoea	5	training
-855	10039109	Rhonchi	5	training
-856	10039117	Rib fracture	9	training
-857	10039163	Right ventricular failure	4	test
-858	10039203	Road traffic accident	7	training
-859	10039227	Rotator cuff syndrome	8	training
-860	10039424	Salivary hypersecretion	1	training
-861	10039580	Scar	6	training
-862	10039621	Schizoaffective disorder	0	test
-863	10039626	Schizophrenia	3	training
-864	10039674	Sciatica	7	training
-865	10039722	Scoliosis	8	validation
-866	10039796	Seborrhoeic keratosis	3	test
-867	10039801	Second primary malignancy	4	training
-868	10039897	Sedation	6	training
-869	10040026	Sensory disturbance	1	training
-870	10040030	Sensory loss	4	training
-871	10040047	Sepsis	9	training
-872	10040070	Septic shock	9	training
-873	10040108	Serotonin syndrome	6	validation
-874	10040250	Serum ferritin increased	0	training
-875	10040477	Sexual dysfunction	1	training
-876	10040560	Shock	7	training
-877	10040617	Shoulder pain	1	training
-878	10040639	Sick sinus syndrome	5	training
-879	10040741	Sinus bradycardia	7	training
-880	10040742	Sinus congestion	5	training
-881	10040744	Sinus headache	1	training
-882	10040752	Sinus tachycardia	8	test
-883	10040753	Sinusitis	9	training
-884	10040808	Skin cancer	1	test
-885	10040829	Skin discolouration	4	training
-886	10040831	Skin disorder	4	training
-887	10040844	Skin exfoliation	5	test
-888	10040865	Skin hyperpigmentation	1	training
-889	10040867	Skin hypertrophy	4	training
-890	10040872	Skin infection	1	training
-891	10040880	Skin irritation	0	test
-892	10040882	Skin lesion	7	test
-893	10040943	Skin ulcer	8	training
-894	10040979	Sleep apnoea syndrome	9	training
-895	10040984	Sleep disorder	8	training
-896	10041101	Small intestinal obstruction	7	training
-897	10041235	Snoring	5	training
-898	10041243	Social avoidant behaviour	4	training
-899	10041347	Somnambulism	0	training
-900	10041349	Somnolence	9	test
-901	10041466	Speech disorder	6	training
-902	10041540	Spinal column stenosis	8	validation
-903	10041541	Spinal compression fracture	7	training
-904	10041549	Spinal cord compression	3	training
-905	10041569	Spinal fracture	5	training
-906	10041591	Spinal osteoarthritis	9	training
-907	10041660	Splenomegaly	6	training
-908	10041807	Sputum discoloured	5	test
-909	10041823	Squamous cell carcinoma	3	training
-910	10041834	Squamous cell carcinoma of skin	0	training
-911	10041962	Status epilepticus	3	test
-912	10042033	Stevens-Johnson syndrome	6	validation
-913	10042101	Stomach discomfort	0	training
-914	10042128	Stomatitis	8	training
-915	10042209	Stress	8	training
-916	10042212	Stress fracture	5	training
-917	10042316	Subarachnoid haemorrhage	4	training
-918	10042343	Subcutaneous abscess	0	training
-919	10042361	Subdural haematoma	7	training
-920	10042434	Sudden death	4	training
-921	10042458	Suicidal ideation	8	test
-922	10042464	Suicide attempt	7	training
-923	10042602	Supraventricular extrasystoles	6	test
-924	10042604	Supraventricular tachycardia	7	training
-925	10042609	Surgery	3	training
-926	10042674	Swelling	8	training
-927	10042682	Swelling face	5	validation
-928	10042727	Swollen tongue	4	validation
-929	10042772	Syncope	9	test
-930	10042858	Synovial cyst	5	training
-931	10042868	Synovitis	4	training
-932	10042945	Systemic lupus erythematosus	4	test
-933	10043071	Tachycardia	9	test
-934	10043089	Tachypnoea	6	training
-935	10043118	Tardive dyskinesia	8	training
-936	10043169	Tearfulness	1	training
-937	10043220	Temporomandibular joint syndrome	3	test
-938	10043224	Tenderness	7	training
-939	10043239	Tendon disorder	1	training
-940	10043248	Tendon rupture	1	test
-941	10043255	Tendonitis	5	training
-942	10043261	Tenosynovitis	0	test
-943	10043269	Tension headache	0	training
-944	10043408	Therapeutic agent toxicity	7	test
-945	10043414	Therapeutic response decreased	3	validation
-946	10043417	Therapeutic response unexpected	0	validation
-947	10043431	Thinking abnormal	3	training
-948	10043458	Thirst	3	training
-949	10043521	Throat irritation	3	test
-950	10043528	Throat tightness	0	training
-951	10043554	Thrombocytopenia	9	training
-952	10043570	Thrombophlebitis	4	training
-953	10043595	Thrombophlebitis superficial	5	training
-954	10043607	Thrombosis	6	validation
-955	10043645	Thrombotic microangiopathy	3	training
-956	10043648	Thrombotic thrombocytopenic purpura	0	training
-957	10043709	Thyroid disorder	3	training
-958	10043744	Thyroid neoplasm	4	training
-959	10043827	Tibia fracture	2	training
-960	10043882	Tinnitus	5	training
-961	10043903	Tobacco abuse	2	test
-962	10043951	Tongue disorder	1	test
-963	10043991	Tongue ulceration	0	training
-964	10044016	Tooth abscess	7	training
-965	10044034	Tooth disorder	6	training
-966	10044044	Tooth loss	7	training
-967	10044055	Toothache	7	training
-968	10044066	Torsade de pointes	5	training
-969	10044221	Toxic encephalopathy	0	test
-970	10044223	Toxic epidermal necrolysis	7	training
-971	10044390	Transient ischaemic attack	8	training
-972	10044439	Transplant rejection	1	training
-973	10044565	Tremor	9	training
-974	10044640	Tricuspid valve incompetence	9	training
-975	10044684	Trismus	0	training
-976	10044755	Tuberculosis	1	training
-977	10045170	Tumour lysis syndrome	4	training
-978	10045285	Ulcer	3	test
-979	10045458	Umbilical hernia	2	test
-980	10045555	Unresponsive to stimuli	8	training
-981	10046274	Upper gastrointestinal haemorrhage	7	training
-982	10046306	Upper respiratory tract infection	9	training
-983	10046542	Urinary hesitation	2	test
-984	10046543	Urinary incontinence	8	test
-985	10046555	Urinary retention	8	training
-986	10046571	Urinary tract infection	9	training
-987	10046572	Urinary tract infection enterococcal	1	test
-988	10046735	Urticaria	4	training
-989	10046798	Uterine leiomyoma	3	test
-990	10046910	Vaginal haemorrhage	0	training
-991	10046914	Vaginal infection	2	test
-992	10046996	Varicose vein	4	validation
-993	10047115	Vasculitis	5	training
-994	10047195	Vena cava thrombosis	0	test
-995	10047216	Venoocclusive liver disease	2	training
-996	10047249	Venous thrombosis	0	training
-997	10047281	Ventricular arrhythmia	1	validation
-998	10047289	Ventricular extrasystoles	8	training
-999	10047290	Ventricular fibrillation	7	training
-1000	10047295	Ventricular hypertrophy	6	training
-1001	10047302	Ventricular tachycardia	8	test
-1002	10047340	Vertigo	6	training
-1003	10047348	Vertigo positional	2	test
-1004	10047386	Vestibular disorder	0	test
-1005	10047461	Viral infection	4	validation
-1006	10047513	Vision blurred	8	test
-1007	10047531	Visual acuity reduced	4	validation
-1008	10047543	Visual disturbance	0	validation
-1009	10047571	Visual impairment	5	validation
-1010	10047609	Vitamin B12 deficiency	4	test
-1011	10047626	Vitamin D deficiency	8	training
-1012	10047654	Vitreous floaters	1	training
-1013	10047700	Vomiting	9	training
-1014	10047895	Weight decreased	9	training
-1015	10047899	Weight increased	9	training
-1016	10047920	Wheelchair user	0	training
-1017	10047924	Wheezing	8	test
-1018	10047942	White blood cell count decreased	9	training
-1019	10047943	White blood cell count increased	8	test
-1020	10048010	Withdrawal syndrome	3	training
-1021	10048031	Wound dehiscence	5	training
-1022	10048038	Wound infection	5	training
-1023	10048049	Wrist fracture	4	test
-1024	10048294	Mental status changes	9	training
-1025	10048302	Tubulointerstitial nephritis	4	test
-1026	10048334	Mobility decreased	6	training
-1027	10048393	Multiple sclerosis relapse	5	training
-1028	10048439	Fibromyalgia	8	validation
-1029	10048561	Stent placement	2	training
-1030	10048595	Histiocytosis haematophagic	3	training
-1031	10048620	Intracardiac thrombus	1	training
-1032	10048624	Physical disability	2	training
-1033	10048629	Wound secretion	0	training
-1034	10048685	Oral infection	3	training
-1035	10048706	Joint range of motion decreased	7	training
-1036	10048709	Urosepsis	5	training
-1037	10048762	Tooth infection	5	training
-1038	10048777	Carotid bruit	0	training
-1039	10048780	Myofascial pain syndrome	1	training
-1040	10048799	Acute generalised exanthematous pustulosis	3	training
-1041	10048832	Colon adenoma	1	training
-1042	10048858	Ischaemic cardiomyopathy	7	validation
-1043	10048865	Hypoacusis	3	training
-1044	10048919	Performance status decreased	0	training
-1045	10048948	Bedridden	2	validation
-1046	10048959	Peripheral swelling	4	test
-1047	10048962	Brain oedema	4	training
-1048	10048964	Carotid artery occlusion	0	test
-1049	10048975	Vascular pseudoaneurysm	0	test
-1050	10049088	Osteopenia	9	test
-1051	10049119	Emotional distress	9	training
-1052	10049146	Neck mass	0	test
-1053	10049151	Neutropenic sepsis	6	training
-1054	10049177	Drug screen positive	2	test
-1055	10049187	Red blood cell sedimentation rate increased	3	validation
-1056	10049193	Drug exposure during pregnancy	5	training
-1057	10049398	Gingival ulceration	0	training
-1058	10049414	Treatment noncompliance	8	training
-1059	10049438	General physical health deterioration	9	training
-1060	10049442	Implantable defibrillator insertion	0	training
-1061	10049447	Tachyarrhythmia	2	training
-1062	10049460	Abasia	6	training
-1063	10049470	Bone density decreased	5	test
-1064	10049564	Impaired driving ability	0	training
-1065	10049666	Homicidal ideation	3	training
-1066	10049694	Left ventricular dysfunction	8	training
-1067	10049765	Bradyarrhythmia	0	training
-1068	10049771	Shock haemorrhagic	3	training
-1069	10049773	Left ventricular hypertrophy	8	training
-1070	10049796	Excoriation	6	training
-1071	10049803	Blood glucose fluctuation	2	training
-1072	10049816	Muscle tightness	2	training
-1073	10049848	Balance disorder	7	validation
-1074	10049866	Aphagia	1	training
-1075	10049947	Lumbar vertebral fracture	0	training
-1076	10049948	Thoracic vertebral fracture	0	training
-1077	10050012	Bradyphrenia	0	training
-1078	10050031	Muscle strain	5	test
-1079	10050040	VIIth nerve paralysis	3	training
-1080	10050207	Skin fibrosis	1	training
-1081	10050219	Lumbar radiculopathy	5	validation
-1082	10050256	Dysstasia	3	validation
-1083	10050296	Intervertebral disc protrusion	9	training
-1084	10050337	Cerumen impaction	2	training
-1085	10050380	Electrocardiogram T wave abnormal	4	training
-1086	10050510	Ventricular hypokinesia	5	training
-1087	10050528	Ejection fraction decreased	8	training
-1088	10050558	Mitral valve calcification	4	training
-1089	10050584	Contusion	9	validation
-1090	10050637	Skin tightness	4	validation
-1091	10050778	Walking aid user	4	training
-1092	10050819	Musculoskeletal chest pain	8	training
-1093	10050845	Cardioactive drug level increased	5	training
-1094	10050904	Cytolytic hepatitis	6	test
-1095	10050953	Lower gastrointestinal haemorrhage	5	validation
-1096	10050954	Activities of daily living impaired	7	training
-1097	10051017	Staphylococcal bacteraemia	4	test
-1098	10051055	Deep vein thrombosis	9	training
-1099	10051076	Prescribed overdose	1	test
-1100	10051077	Post procedural haemorrhage	2	training
-1101	10051078	Lacunar infarction	4	training
-1102	10051082	Therapy non-responder	0	test
-1103	10051093	Cardiopulmonary failure	0	test
-1104	10051128	Blood pressure inadequately controlled	2	training
-1105	10051290	Central nervous system lesion	0	training
-1106	10051301	Exercise tolerance decreased	3	training
-1107	10051327	Pharmaceutical product complaint	2	training
-1108	10051379	Systemic inflammatory response syndrome	4	validation
-1109	10051398	Malignant neoplasm progression	9	test
-1110	10051482	Prostatomegaly	2	training
-1111	10051576	Generalised erythema	0	training
-1112	10051589	Large intestine polyp	4	training
-1113	10051592	Acute coronary syndrome	6	training
-1114	10051608	Platelet count increased	4	training
-1115	10051612	Sputum culture positive	3	training
-1116	10051728	Bone erosion	2	training
-1117	10051753	Vascular calcification	4	training
-1118	10051792	Infusion related reaction	5	training
-1119	10051837	Skin induration	4	validation
-1120	10052066	Metabolic syndrome	2	training
-1121	10052076	Haemodynamic instability	4	training
-1122	10052238	Escherichia urinary tract infection	3	test
-1123	10052251	Respiratory tract congestion	1	test
-1124	10052293	Haemorrhagic anaemia	6	training
-1125	10052302	Impaired work ability	2	training
-1126	10052337	Diastolic dysfunction	6	training
-1127	10052428	Wound	7	test
-1128	10052460	Primary sequestrum	6	test
-1129	10052576	Pruritus generalised	3	training
-1130	10052804	Drug tolerance	2	validation
-1131	10052840	Cardiac flutter	2	training
-1132	10052897	Nerve injury	3	training
-1133	10052904	Musculoskeletal stiffness	7	training
-1134	10053156	Musculoskeletal discomfort	6	validation
-1135	10053159	Organ failure	1	training
-1136	10053198	Inappropriate antidiuretic hormone secretion	5	validation
-1137	10053213	Febrile bone marrow aplasia	2	training
-1138	10053405	Brain natriuretic peptide increased	4	training
-1139	10053555	Arthritis bacterial	1	training
-1140	10053573	Abscess jaw	1	training
-1141	10053631	Bone swelling	1	validation
-1142	10053762	Off label use	6	training
-1143	10053777	Meniscus lesion	3	training
-1144	10053840	Bacterial sepsis	2	training
-1145	10054107	Nodule	4	training
-1146	10054196	Affect lability	0	training
-1147	10054208	Aortic calcification	5	training
-1148	10054236	Clostridium difficile infection	2	test
-1149	10054263	Helicobacter infection	0	training
-1150	10054786	Skin burning sensation	2	training
-1151	10054787	Haemorrhoidal haemorrhage	0	training
-1152	10054813	Facet joint syndrome	3	training
-1153	10054889	Transaminases increased	5	validation
-1154	10055014	Cardiac stress test abnormal	0	training
-1155	10055041	Intervertebral disc space narrowing	3	training
-1156	10055113	Breast cancer metastatic	2	validation
-1157	10055798	Haemorrhage	6	training
-1158	10055870	Postmenopausal haemorrhage	0	training
-1159	10056325	Faecaloma	2	training
-1160	10056342	Pulmonary mass	8	training
-1161	10056370	Congestive cardiomyopathy	6	training
-1162	10056407	Refusal of treatment by patient	5	training
-1163	10056430	Staphylococcal sepsis	5	training
-1164	10056529	Biliary dyskinesia	4	validation
-1165	10056812	Body height decreased	4	training
-1166	10056819	Gastric disorder	4	training
-1167	10057040	Temperature intolerance	1	training
-1168	10057320	Venous insufficiency	4	validation
-1169	10057371	Hypoaesthesia oral	4	training
-1170	10057372	Paraesthesia oral	3	training
-1171	10057581	Tobacco user	2	test
-1172	10057666	Anxiety disorder	4	training
-1173	10057667	Bipolar disorder	7	training
-1174	10057668	Cognitive disorder	5	training
-1175	10057765	Procedural complication	0	validation
-1176	10057840	Major depression	6	test
-1177	10057867	Multiple drug overdose	4	training
-1178	10057970	Toxic skin eruption	5	test
-1179	10058046	Post procedural complication	5	test
-1180	10058080	Staphylococcal infection	9	training
-1181	10058097	Metabolic disorder	0	test
-1182	10058108	Dyslipidaemia	7	training
-1183	10058151	Pulseless electrical activity	2	training
-1184	10058267	Troponin increased	5	training
-1185	10058360	Retroperitoneal haematoma	0	test
-1186	10058467	Lung neoplasm malignant	5	training
-1187	10058648	Aortic disorder	0	training
-1188	10058709	Sopor	2	test
-1189	10058818	Skin laceration	2	training
-1190	10058854	Cytomegalovirus viraemia	0	training
-1191	10058907	Spinal deformity	1	training
-1192	10058919	Drug rash with eosinophilia and systemic symptoms	5	training
-1193	10058920	Restless legs syndrome	8	training
-1194	10059056	Ventricular dysfunction	3	training
-1195	10059245	Angiopathy	2	training
-1196	10059282	Metastases to central nervous system	5	training
-1197	10059442	Wound infection staphylococcal	2	training
-1198	10059570	Blood alkaline phosphatase increased	9	training
-1199	10059865	Jugular vein distension	0	training
-1200	10059866	Drug resistance	1	test
-1201	10059895	Urine output decreased	6	training
-1202	10060734	Diabetic foot	2	test
-1203	10060795	Hepatic enzyme increased	5	validation
-1204	10060800	Hot flush	6	training
-1205	10060820	Joint injury	7	training
-1206	10060860	Neurological symptom	2	validation
-1207	10060862	Prostate cancer	3	training
-1208	10060921	Abdominal abscess	0	training
-1209	10060945	Bacterial infection	6	training
-1210	10060946	Pneumonia bacterial	4	training
-1211	10060954	Abdominal hernia	5	training
-1212	10061011	Bladder disorder	1	training
-1213	10061024	Cardiac disorder	6	training
-1214	10061043	Clostridial infection	4	test
-1215	10061104	Diabetic complication	3	training
-1216	10061105	Dialysis	6	training
-1217	10061111	Drug abuser	4	training
-1218	10061114	Economic problem	9	validation
-1219	10061117	Electrocardiogram ST-T change	1	test
-1220	10061124	Enterococcal infection	6	training
-1221	10061126	Escherichia infection	4	training
-1222	10061159	Foot deformity	4	training
-1223	10061161	Pelvic fracture	3	training
-1224	10061169	Embolism	0	training
-1225	10061200	Heart injury	1	training
-1226	10061218	Inflammation	7	training
-1227	10061224	Limb discomfort	3	test
-1228	10061225	Limb injury	6	training
-1229	10061229	Lung infection	6	training
-1230	10061246	Intervertebral disc degeneration	9	training
-1231	10061255	Ischaemia	4	training
-1232	10061256	Ischaemic stroke	3	training
-1233	10061257	Jaw disorder	4	test
-1234	10061259	Klebsiella infection	3	training
-1235	10061273	Malnutrition	8	test
-1236	10061284	Mental disorder	8	training
-1237	10061289	Metastatic neoplasm	2	training
-1238	10061296	Motor dysfunction	1	training
-1239	10061309	Neoplasm progression	5	test
-1240	10061318	Oesophageal disorder	1	test
-1241	10061355	Poisoning	4	validation
-1242	10061366	Soft tissue disorder	0	training
-1243	10061368	Spinal disorder	5	validation
-1244	10061372	Streptococcal infection	2	training
-1245	10061394	Upper limb fracture	5	training
-1246	10061406	Cardiac valve disease	6	test
-1247	10061422	Abnormal behaviour	6	test
-1248	10061428	Decreased appetite	9	training
-1249	10061461	Erectile dysfunction	6	training
-1250	10061471	Pseudomonas infection	5	training
-1251	10061472	Psychiatric symptom	1	training
-1252	10061481	Renal injury	8	test
-1253	10061520	Ill-defined disorder	7	training
-1254	10061521	Intervertebral disc disorder	7	training
-1255	10061529	Polyp	3	training
-1256	10061532	Mitral valve disease	2	validation
-1257	10061536	Parkinson's disease	4	training
-1258	10061593	Echocardiogram abnormal	5	training
-1259	10061598	Immunodeficiency	1	training
-1260	10061599	Lower limb fracture	3	training
-1261	10061619	Deformity	8	training
-1262	10061623	Adverse drug reaction	0	training
-1263	10061728	Bone lesion	7	training
-1264	10061744	Carotid artery disease	3	training
-1265	10061818	Disease progression	8	training
-1266	10061819	Disease recurrence	2	training
-1267	10061822	Drug intolerance	3	training
-1268	10061835	Diabetic nephropathy	4	training
-1269	10061873	Non-small cell lung cancer	2	training
-1270	10061877	Obstructive airways disorder	5	training
-1271	10061880	Occult blood positive	4	training
-1272	10061920	Psychotic disorder	7	training
-1273	10061998	Hepatic lesion	5	training
-1274	10062015	Immunosuppressant drug level increased	0	training
-1275	10062016	Immunosuppression	3	training
-1276	10062042	Lung neoplasm	6	validation
-1277	10062060	Hyperlipidaemia	9	test
-1278	10062132	Tooth extraction	4	training
-1279	10062189	Vitamin D decreased	2	training
-1280	10062190	Metabolic encephalopathy	5	training
-1281	10062211	Neck injury	3	training
-1282	10062237	Renal impairment	9	test
-1283	10062244	Sinus disorder	5	training
-1284	10062254	Social problem	0	training
-1285	10062352	Respiratory tract infection	3	training
-1286	10062355	Unevaluable event	8	training
-1287	10062501	Non-cardiac chest pain	5	training
-1288	10062506	Heparin-induced thrombocytopenia	4	training
-1289	10062519	Poor quality sleep	3	training
-1290	10062544	Tooth fracture	7	training
-1291	10062585	Peripheral arterial occlusive disease	4	training
-1292	10062599	Arterial occlusive disease	3	training
-1293	10062713	Haemorrhagic diathesis	0	test
-1294	10062717	Increased upper airway secretion	2	test
-1295	10062764	Multiple drug overdose intentional	2	training
-1296	10063495	Self injurious behaviour	0	test
-1297	10063550	Spondylolisthesis	5	test
-1298	10063560	Excessive granulation tissue	1	training
-1299	10063581	Stem cell transplant	1	training
-1300	10063655	Erosive oesophagitis	0	training
-1301	10063670	No therapeutic response	3	training
-1302	10063743	Hypophagia	8	training
-1303	10063829	Device malfunction	3	training
-1304	10063889	Oral intake reduced	3	training
-1305	10064108	Pneumocystis jiroveci pneumonia	4	training
-1306	10064211	Bone fragmentation	2	training
-1307	10064294	Drug dose omission	4	test
-1308	10064307	Incorrect drug administration duration	2	training
-1309	10064353	Wrong technique in drug usage process	3	test
-1310	10064355	Incorrect dose administered	2	training
-1311	10064658	Osteonecrosis of jaw	9	training
-1312	10064687	Device related infection	7	training
-1313	10064780	Breath sounds abnormal	6	training
-1314	10064911	Pulmonary arterial hypertension	3	test
-1315	10065166	Excessive eye blinking	0	training
-1316	10065553	Bone marrow failure	7	training
-1317	10065558	Aortic arteriosclerosis	7	training
-1318	10065612	Loose tooth	6	training
-1319	10065679	Intentional drug misuse	3	validation
-1320	10065687	Bone loss	5	training
-1321	10066169	Substance abuse	1	validation
-1322	10066260	Acute graft versus host disease	1	training
-1323	10066262	Acute graft versus host disease in skin	0	test
-1324	10066392	Fear of death	0	training
-1325	10066901	Treatment failure	0	training
-1326	10067125	Liver injury	1	test
-1327	10067152	Oral herpes	2	training
-1328	10067221	Mechanical ventilation	0	training
-1329	10067286	Left atrial dilatation	6	training
-1330	10067450	Endotracheal intubation	2	test
-1331	10067467	Nephrogenic systemic fibrosis	7	validation
-1332	10067584	Type 1 diabetes mellitus	7	training
-1333	10067585	Type 2 diabetes mellitus	9	training
-1334	10067620	Quality of life decreased	0	validation
-1335	10067621	Oral disorder	6	training
-1336	10067946	Renal cell carcinoma	0	training
-1337	10067967	Brain injury	1	training
-1338	10068319	Oropharyngeal pain	7	training
-1339	10069327	Product quality issue	1	training
-1340	10069339	Acute kidney injury	5	test
-1341	10069690	Vertebral foraminal stenosis	4	training
-1342	10070488	Upper-airway cough syndrome	4	test
-1343	10070511	Hypoxic-ischaemic encephalopathy	2	training
-1344	10070863	Toxicity to various agents	8	training
-1345	10070878	Cerebral small vessel ischaemic disease	1	training
-1346	10071014	Exposed bone in jaw	7	training
-1347	10071066	Posterior reversible encephalopathy syndrome	2	validation
-1348	10071404	Foetal exposure during pregnancy	1	training
-1349	10071408	Maternal exposure during pregnancy	1	training
-1350	10072005	Spinal pain	2	training
-1351	10072268	Drug-induced liver injury	1	training
-1352	10072970	Meniscus injury	1	training
-1353	10073302	Exposure via ingestion	1	test
-1354	10073508	Drug reaction with eosinophilia and systemic symptoms	5	training
-1355	10073513	Exposure during pregnancy	1	training
-1356	10074170	Candida infection	5	test
-1357	10074903	Intentional product misuse	1	test
+endpoint_index	meddra_pt_code	positive_frequency_decile	split
+0	10000059	5	validation
+1	10000060	8	training
+2	10000077	1	test
+3	10000081	9	training
+4	10000084	3	training
+5	10000087	8	training
+6	10000097	4	training
+7	10000125	2	test
+8	10000234	1	training
+9	10000269	6	training
+10	10000381	4	training
+11	10000486	6	training
+12	10000496	0	training
+13	10000614	3	training
+14	10000620	3	training
+15	10000636	5	training
+16	10000804	3	training
+17	10000880	6	test
+18	10000891	8	training
+19	10001017	4	training
+20	10001029	5	training
+21	10001052	7	training
+22	10001053	8	test
+23	10001076	5	training
+24	10001367	5	test
+25	10001443	4	training
+26	10001488	7	training
+27	10001497	8	training
+28	10001507	7	test
+29	10001540	3	validation
+30	10001551	9	validation
+31	10001584	1	training
+32	10001639	0	training
+33	10001760	7	training
+34	10001854	7	training
+35	10001889	0	training
+36	10001949	7	training
+37	10002034	9	test
+38	10002064	0	training
+39	10002073	1	training
+40	10002198	6	test
+41	10002199	3	training
+42	10002329	1	training
+43	10002368	5	training
+44	10002383	9	test
+45	10002388	8	test
+46	10002424	5	training
+47	10002511	9	validation
+48	10002544	6	training
+49	10002646	6	training
+50	10002847	5	training
+51	10002855	9	training
+52	10002882	6	training
+53	10002906	6	training
+54	10002915	8	validation
+55	10002917	3	training
+56	10002918	1	training
+57	10002942	1	training
+58	10002948	6	training
+59	10002965	1	training
+60	10002967	0	test
+61	10002974	3	training
+62	10003084	1	validation
+63	10003119	7	training
+64	10003130	0	training
+65	10003210	9	training
+66	10003211	8	training
+67	10003239	9	training
+68	10003246	9	validation
+69	10003285	8	validation
+70	10003399	3	training
+71	10003445	8	training
+72	10003481	9	training
+73	10003488	2	validation
+74	10003504	7	training
+75	10003549	9	test
+76	10003553	9	validation
+77	10003591	6	training
+78	10003598	9	test
+79	10003658	9	training
+80	10003662	7	training
+81	10003668	3	training
+82	10003671	4	training
+83	10003673	5	training
+84	10003674	7	validation
+85	10003677	1	test
+86	10003694	1	test
+87	10003736	2	training
+88	10003885	7	validation
+89	10003983	5	test
+90	10003986	5	training
+91	10003988	9	test
+92	10003997	7	training
+93	10004137	3	validation
+94	10004146	6	training
+95	10004446	6	test
+96	10004663	0	training
+97	10004939	2	training
+98	10005169	2	training
+99	10005191	6	training
+100	10005287	7	training
+101	10005328	0	validation
+102	10005364	8	test
+103	10005395	6	training
+104	10005396	1	training
+105	10005419	5	validation
+106	10005423	1	training
+107	10005425	9	training
+108	10005464	2	test
+109	10005470	7	training
+110	10005483	9	validation
+111	10005488	5	test
+112	10005554	1	test
+113	10005555	6	test
+114	10005557	8	training
+115	10005619	1	test
+116	10005630	7	training
+117	10005654	6	validation
+118	10005724	8	training
+119	10005725	7	training
+120	10005734	8	training
+121	10005737	3	test
+122	10005746	3	test
+123	10005750	7	test
+124	10005760	5	training
+125	10005802	8	training
+126	10005839	8	training
+127	10005851	9	test
+128	10005861	2	test
+129	10005911	2	training
+130	10005956	9	training
+131	10006002	8	training
+132	10006093	9	training
+133	10006187	3	test
+134	10006272	5	test
+135	10006326	0	training
+136	10006445	3	test
+137	10006451	9	training
+138	10006458	3	validation
+139	10006469	6	training
+140	10006473	4	training
+141	10006482	6	test
+142	10006514	3	training
+143	10006578	0	validation
+144	10006580	7	training
+145	10006582	6	test
+146	10006784	5	validation
+147	10006811	8	training
+148	10006825	8	test
+149	10006895	5	training
+150	10006924	2	training
+151	10006956	3	test
+152	10007152	7	training
+153	10007515	8	test
+154	10007554	9	training
+155	10007556	3	training
+156	10007558	1	training
+157	10007559	9	test
+158	10007586	8	training
+159	10007598	2	training
+160	10007610	1	training
+161	10007617	8	training
+162	10007625	6	validation
+163	10007632	9	training
+164	10007636	8	training
+165	10007687	7	test
+166	10007697	8	test
+167	10007739	8	training
+168	10007810	1	training
+169	10007815	3	training
+170	10007882	9	training
+171	10008096	7	test
+172	10008111	6	test
+173	10008118	7	training
+174	10008120	5	training
+175	10008190	8	training
+176	10008196	0	training
+177	10008313	4	training
+178	10008469	8	training
+179	10008479	9	training
+180	10008499	5	test
+181	10008531	7	training
+182	10008589	2	training
+183	10008604	0	test
+184	10008611	4	training
+185	10008612	7	training
+186	10008614	4	training
+187	10008617	7	training
+188	10008629	9	training
+189	10008635	7	training
+190	10008748	1	training
+191	10008796	2	training
+192	10009033	9	training
+193	10009137	5	training
+194	10009192	6	test
+195	10009245	1	training
+196	10009657	8	training
+197	10009802	8	test
+198	10009866	3	training
+199	10009887	7	training
+200	10009895	5	training
+201	10009900	2	training
+202	10009944	1	test
+203	10010003	6	training
+204	10010071	7	test
+205	10010144	7	training
+206	10010185	1	training
+207	10010214	7	training
+208	10010235	6	validation
+209	10010254	1	training
+210	10010264	8	training
+211	10010276	1	training
+212	10010305	9	training
+213	10010719	0	validation
+214	10010741	6	training
+215	10010774	9	training
+216	10010904	8	training
+217	10010947	4	training
+218	10010968	1	validation
+219	10011078	9	training
+220	10011086	6	training
+221	10011089	7	test
+222	10011219	2	validation
+223	10011224	9	validation
+224	10011372	1	validation
+225	10011376	3	training
+226	10011401	5	training
+227	10011469	3	training
+228	10011640	2	training
+229	10011703	5	test
+230	10011732	4	training
+231	10011781	6	test
+232	10011793	1	training
+233	10011831	6	test
+234	10011878	7	test
+235	10011891	2	training
+236	10011906	5	training
+237	10011953	0	training
+238	10011971	6	training
+239	10011985	7	test
+240	10012174	9	training
+241	10012218	8	training
+242	10012239	5	training
+243	10012267	7	test
+244	10012271	3	training
+245	10012305	1	training
+246	10012318	8	training
+247	10012335	2	test
+248	10012373	8	test
+249	10012374	5	training
+250	10012378	9	training
+251	10012426	1	validation
+252	10012431	6	training
+253	10012432	0	training
+254	10012441	2	test
+255	10012442	0	test
+256	10012455	4	training
+257	10012601	9	training
+258	10012607	9	training
+259	10012613	4	validation
+260	10012650	5	training
+261	10012671	7	training
+262	10012680	8	training
+263	10012689	5	training
+264	10012735	9	test
+265	10012794	2	training
+266	10013002	5	test
+267	10013012	6	training
+268	10013036	6	training
+269	10013050	7	training
+270	10013082	3	training
+271	10013395	7	training
+272	10013442	8	training
+273	10013496	6	training
+274	10013538	8	training
+275	10013554	9	training
+276	10013559	6	training
+277	10013573	9	training
+278	10013578	1	training
+279	10013654	5	training
+280	10013663	7	test
+281	10013678	2	test
+282	10013687	5	training
+283	10013700	8	training
+284	10013709	4	training
+285	10013710	9	training
+286	10013722	5	training
+287	10013746	7	training
+288	10013754	6	training
+289	10013774	4	test
+290	10013781	8	training
+291	10013786	6	training
+292	10013836	4	training
+293	10013839	0	training
+294	10013864	6	test
+295	10013886	2	training
+296	10013887	8	test
+297	10013911	6	validation
+298	10013916	8	training
+299	10013946	9	test
+300	10013950	9	training
+301	10013952	7	test
+302	10013968	9	test
+303	10013971	9	training
+304	10013974	2	test
+305	10013983	4	test
+306	10013990	8	training
+307	10014011	2	training
+308	10014020	8	test
+309	10014062	4	training
+310	10014080	7	training
+311	10014184	6	training
+312	10014363	6	training
+313	10014380	0	validation
+314	10014387	7	training
+315	10014391	2	test
+316	10014392	0	training
+317	10014408	0	validation
+318	10014418	7	test
+319	10014498	0	validation
+320	10014551	8	test
+321	10014561	8	training
+322	10014581	1	training
+323	10014625	8	training
+324	10014665	3	training
+325	10014866	2	training
+326	10014893	3	test
+327	10014945	2	test
+328	10014950	6	test
+329	10015037	4	training
+330	10015090	8	training
+331	10015108	1	training
+332	10015137	2	training
+333	10015145	0	training
+334	10015150	7	training
+335	10015218	2	test
+336	10015296	1	training
+337	10015488	6	training
+338	10015688	8	training
+339	10015832	7	training
+340	10015856	2	validation
+341	10015916	0	training
+342	10015946	0	test
+343	10015958	2	training
+344	10015995	1	training
+345	10016029	4	training
+346	10016042	1	training
+347	10016059	5	validation
+348	10016092	5	training
+349	10016100	3	test
+350	10016165	6	training
+351	10016173	9	training
+352	10016215	3	training
+353	10016256	9	training
+354	10016275	8	training
+355	10016288	9	training
+356	10016322	5	test
+357	10016326	0	training
+358	10016330	0	training
+359	10016334	4	training
+360	10016338	3	training
+361	10016450	1	validation
+362	10016454	4	test
+363	10016581	1	training
+364	10016642	6	test
+365	10016667	2	training
+366	10016717	4	training
+367	10016750	7	test
+368	10016759	0	test
+369	10016766	5	training
+370	10016803	8	training
+371	10016807	7	training
+372	10016825	6	validation
+373	10016970	8	validation
+374	10017062	0	training
+375	10017367	0	validation
+376	10017413	2	training
+377	10017533	7	training
+378	10017577	9	training
+379	10017626	7	test
+380	10017642	0	training
+381	10017693	8	training
+382	10017711	2	training
+383	10017817	0	training
+384	10017822	7	training
+385	10017826	3	test
+386	10017853	9	training
+387	10017865	5	training
+388	10017885	9	training
+389	10017888	8	training
+390	10017918	4	training
+391	10017944	2	training
+392	10017955	9	training
+393	10018075	1	training
+394	10018092	6	training
+395	10018276	6	training
+396	10018280	2	training
+397	10018286	4	training
+398	10018290	2	training
+399	10018291	3	training
+400	10018292	6	training
+401	10018304	7	training
+402	10018358	4	training
+403	10018388	2	training
+404	10018429	6	training
+405	10018484	5	training
+406	10018498	3	training
+407	10018627	7	training
+408	10018651	4	training
+409	10018659	5	training
+410	10018687	2	training
+411	10018691	1	test
+412	10018735	4	training
+413	10018800	4	training
+414	10018814	0	training
+415	10018830	7	test
+416	10018836	7	validation
+417	10018838	9	validation
+418	10018852	8	training
+419	10018867	9	training
+420	10018870	2	training
+421	10018875	7	training
+422	10018884	9	training
+423	10018910	1	training
+424	10018916	4	training
+425	10018932	0	training
+426	10018964	8	training
+427	10018985	4	training
+428	10019016	1	validation
+429	10019022	9	training
+430	10019063	7	training
+431	10019070	6	training
+432	10019075	6	training
+433	10019079	0	training
+434	10019114	4	test
+435	10019196	7	training
+436	10019211	8	training
+437	10019301	6	training
+438	10019303	6	training
+439	10019304	8	training
+440	10019465	6	test
+441	10019468	1	test
+442	10019641	4	test
+443	10019645	0	training
+444	10019646	6	training
+445	10019660	4	training
+446	10019663	7	validation
+447	10019670	8	validation
+448	10019692	0	test
+449	10019708	9	validation
+450	10019717	6	test
+451	10019727	2	training
+452	10019731	1	training
+453	10019744	4	training
+454	10019754	3	test
+455	10019772	2	validation
+456	10019837	5	training
+457	10019842	6	test
+458	10019847	0	training
+459	10019851	4	validation
+460	10019909	2	training
+461	10019948	3	validation
+462	10019973	0	training
+463	10019974	8	test
+464	10020028	9	test
+465	10020039	1	validation
+466	10020060	0	training
+467	10020096	2	training
+468	10020100	6	validation
+469	10020462	4	test
+470	10020508	0	training
+471	10020524	5	validation
+472	10020568	0	validation
+473	10020578	5	training
+474	10020583	7	training
+475	10020591	1	training
+476	10020603	8	training
+477	10020608	0	test
+478	10020635	9	training
+479	10020642	8	validation
+480	10020646	9	test
+481	10020649	5	training
+482	10020679	3	training
+483	10020705	2	training
+484	10020710	0	test
+485	10020745	0	training
+486	10020751	5	training
+487	10020765	5	training
+488	10020772	9	training
+489	10020802	3	training
+490	10020823	5	test
+491	10020843	4	training
+492	10020850	4	training
+493	10020852	1	test
+494	10020853	1	training
+495	10020869	5	test
+496	10020903	4	training
+497	10020910	0	training
+498	10020937	9	training
+499	10020942	6	test
+500	10020947	7	test
+501	10020983	1	test
+502	10020993	9	training
+503	10021000	0	training
+504	10021015	9	training
+505	10021021	3	training
+506	10021027	8	training
+507	10021030	0	training
+508	10021036	9	test
+509	10021058	4	test
+510	10021089	0	training
+511	10021097	9	training
+512	10021113	3	training
+513	10021114	8	training
+514	10021118	1	training
+515	10021133	1	training
+516	10021137	7	training
+517	10021138	2	test
+518	10021143	9	training
+519	10021328	7	training
+520	10021333	4	validation
+521	10021518	7	training
+522	10021519	8	training
+523	10021576	3	training
+524	10021597	3	training
+525	10021630	1	test
+526	10021639	5	training
+527	10021654	3	training
+528	10021688	3	validation
+529	10021789	8	validation
+530	10022000	5	training
+531	10022004	5	training
+532	10022013	1	training
+533	10022016	2	training
+534	10022052	4	training
+535	10022061	3	training
+536	10022067	3	training
+537	10022086	3	training
+538	10022093	1	validation
+539	10022107	0	training
+540	10022116	9	validation
+541	10022437	9	test
+542	10022523	5	test
+543	10022524	2	training
+544	10022562	5	training
+545	10022594	3	training
+546	10022595	9	training
+547	10022611	8	training
+548	10022680	4	training
+549	10022687	6	training
+550	10022694	2	training
+551	10022972	7	training
+552	10022998	5	test
+553	10023003	7	test
+554	10023126	7	validation
+555	10023129	1	training
+556	10023149	3	training
+557	10023201	2	training
+558	10023204	6	test
+559	10023215	6	test
+560	10023229	3	validation
+561	10023230	6	training
+562	10023232	8	training
+563	10023237	1	validation
+564	10023379	1	training
+565	10023424	2	training
+566	10023439	2	training
+567	10023469	2	training
+568	10023509	6	training
+569	10023547	5	training
+570	10023567	0	training
+571	10023572	6	training
+572	10023644	2	training
+573	10023676	6	training
+574	10023804	2	validation
+575	10023874	3	training
+576	10024119	2	training
+577	10024264	8	training
+578	10024378	8	training
+579	10024382	1	training
+580	10024384	9	training
+581	10024419	1	training
+582	10024453	5	training
+583	10024570	2	training
+584	10024574	3	training
+585	10024612	1	training
+586	10024648	0	training
+587	10024670	7	validation
+588	10024690	7	training
+589	10024738	6	validation
+590	10024770	7	test
+591	10024774	4	training
+592	10024855	8	test
+593	10024910	2	training
+594	10024968	6	training
+595	10025005	7	training
+596	10025080	3	training
+597	10025082	7	validation
+598	10025102	8	validation
+599	10025197	8	training
+600	10025205	1	training
+601	10025256	6	training
+602	10025282	6	training
+603	10025310	4	test
+604	10025327	5	training
+605	10025409	2	training
+606	10025482	7	training
+607	10025650	0	training
+608	10026749	5	training
+609	10026865	6	validation
+610	10026882	4	test
+611	10026923	0	validation
+612	10027091	0	training
+613	10027141	8	test
+614	10027145	2	training
+615	10027175	7	training
+616	10027199	1	training
+617	10027374	3	validation
+618	10027417	8	test
+619	10027452	8	training
+620	10027457	6	training
+621	10027458	5	training
+622	10027459	2	training
+623	10027468	6	training
+624	10027566	4	training
+625	10027590	2	test
+626	10027599	8	validation
+627	10027646	2	training
+628	10027727	9	training
+629	10027730	3	training
+630	10027940	2	test
+631	10027951	4	test
+632	10028024	2	training
+633	10028034	7	test
+634	10028035	4	test
+635	10028116	8	test
+636	10028154	9	training
+637	10028200	7	training
+638	10028224	8	training
+639	10028228	5	training
+640	10028245	4	training
+641	10028289	5	test
+642	10028309	2	validation
+643	10028330	4	training
+644	10028334	9	training
+645	10028335	1	test
+646	10028347	5	training
+647	10028372	9	training
+648	10028391	9	training
+649	10028411	7	training
+650	10028521	2	training
+651	10028533	6	training
+652	10028596	8	training
+653	10028600	8	training
+654	10028622	6	training
+655	10028641	4	training
+656	10028653	5	training
+657	10028735	7	training
+658	10028762	2	training
+659	10028810	4	test
+660	10028813	9	training
+661	10028836	9	training
+662	10028851	0	training
+663	10028980	0	training
+664	10028997	5	test
+665	10029148	8	test
+666	10029151	3	training
+667	10029155	3	training
+668	10029159	1	training
+669	10029164	2	training
+670	10029174	1	test
+671	10029202	2	training
+672	10029216	6	training
+673	10029223	7	training
+674	10029240	1	test
+675	10029279	1	training
+676	10029282	5	training
+677	10029328	2	test
+678	10029331	9	training
+679	10029350	3	test
+680	10029354	9	training
+681	10029366	8	validation
+682	10029368	4	test
+683	10029410	6	training
+684	10029412	3	validation
+685	10029446	6	training
+686	10029470	0	training
+687	10029547	1	training
+688	10029783	4	training
+689	10029816	1	training
+690	10029864	0	training
+691	10029883	9	training
+692	10029898	5	training
+693	10030041	0	training
+694	10030094	4	training
+695	10030095	9	test
+696	10030124	9	validation
+697	10030154	4	validation
+698	10030180	0	training
+699	10030194	2	training
+700	10030201	1	test
+701	10030216	8	training
+702	10030302	4	test
+703	10030338	6	training
+704	10030963	8	training
+705	10031009	7	training
+706	10031123	7	test
+707	10031127	8	training
+708	10031149	5	training
+709	10031161	9	test
+710	10031248	6	training
+711	10031252	9	validation
+712	10031264	6	training
+713	10031282	9	training
+714	10031298	6	training
+715	10033072	1	validation
+716	10033078	5	training
+717	10033132	3	training
+718	10033295	7	training
+719	10033307	2	training
+720	10033318	7	training
+721	10033371	9	training
+722	10033425	9	test
+723	10033433	9	training
+724	10033474	1	training
+725	10033546	5	training
+726	10033553	5	training
+727	10033557	9	test
+728	10033609	3	training
+729	10033645	8	training
+730	10033647	8	training
+731	10033649	4	training
+732	10033661	9	training
+733	10033664	6	training
+734	10033666	3	training
+735	10033775	8	training
+736	10033799	1	training
+737	10033864	6	training
+738	10034010	4	training
+739	10034016	1	training
+740	10034156	7	training
+741	10034158	2	training
+742	10034263	1	training
+743	10034341	6	training
+744	10034464	0	training
+745	10034474	8	validation
+746	10034484	2	validation
+747	10034536	4	training
+748	10034539	4	training
+749	10034568	1	training
+750	10034576	4	training
+751	10034620	2	training
+752	10034636	8	training
+753	10034674	5	training
+754	10034701	2	test
+755	10034719	0	test
+756	10034721	1	training
+757	10034754	5	test
+758	10034829	3	test
+759	10034835	7	validation
+760	10034844	1	training
+761	10034879	4	training
+762	10034960	2	training
+763	10034972	0	training
+764	10035155	3	training
+765	10035226	6	training
+766	10035484	0	test
+767	10035528	9	training
+768	10035598	9	training
+769	10035600	5	training
+770	10035618	3	training
+771	10035623	4	test
+772	10035664	9	validation
+773	10035669	8	training
+774	10035717	0	validation
+775	10035734	2	validation
+776	10035742	7	test
+777	10035759	7	training
+778	10036018	7	test
+779	10036067	1	training
+780	10036105	5	training
+781	10036142	3	test
+782	10036316	5	test
+783	10036410	0	training
+784	10036556	0	training
+785	10036590	3	training
+786	10036653	7	validation
+787	10036772	3	test
+788	10036790	8	training
+789	10036807	3	training
+790	10036975	2	training
+791	10036978	0	training
+792	10037014	3	training
+793	10037032	6	training
+794	10037063	7	training
+795	10037087	7	training
+796	10037128	2	training
+797	10037153	3	test
+798	10037162	0	training
+799	10037211	3	training
+800	10037313	3	test
+801	10037368	8	training
+802	10037377	9	training
+803	10037383	8	training
+804	10037391	2	training
+805	10037394	4	training
+806	10037400	9	test
+807	10037410	1	training
+808	10037423	9	training
+809	10037448	4	training
+810	10037469	4	training
+811	10037549	5	training
+812	10037569	6	training
+813	10037596	6	test
+814	10037660	9	training
+815	10037779	5	training
+816	10037802	3	training
+817	10037833	7	training
+818	10037844	7	training
+819	10037855	5	test
+820	10037858	3	training
+821	10037867	3	test
+822	10037868	6	validation
+823	10037876	3	training
+824	10037884	4	training
+825	10037888	1	training
+826	10038063	8	training
+827	10038153	7	validation
+828	10038263	1	training
+829	10038378	3	validation
+830	10038381	2	training
+831	10038423	8	training
+832	10038428	7	training
+833	10038435	9	training
+834	10038436	9	training
+835	10038444	9	test
+836	10038537	1	training
+837	10038540	7	test
+838	10038642	0	training
+839	10038661	3	training
+840	10038669	6	test
+841	10038678	4	training
+842	10038683	3	test
+843	10038687	8	training
+844	10038695	9	training
+845	10038712	4	test
+846	10038743	6	training
+847	10038776	4	training
+848	10038867	0	test
+849	10038980	1	training
+850	10039020	8	training
+851	10039073	7	test
+852	10039083	6	training
+853	10039085	8	test
+854	10039101	5	training
+855	10039109	5	training
+856	10039117	9	training
+857	10039163	4	test
+858	10039203	7	training
+859	10039227	8	training
+860	10039424	1	training
+861	10039580	6	training
+862	10039621	0	test
+863	10039626	3	training
+864	10039674	7	training
+865	10039722	8	validation
+866	10039796	3	test
+867	10039801	4	training
+868	10039897	6	training
+869	10040026	1	training
+870	10040030	4	training
+871	10040047	9	training
+872	10040070	9	training
+873	10040108	6	validation
+874	10040250	0	training
+875	10040477	1	training
+876	10040560	7	training
+877	10040617	1	training
+878	10040639	5	training
+879	10040741	7	training
+880	10040742	5	training
+881	10040744	1	training
+882	10040752	8	test
+883	10040753	9	training
+884	10040808	1	test
+885	10040829	4	training
+886	10040831	4	training
+887	10040844	5	test
+888	10040865	1	training
+889	10040867	4	training
+890	10040872	1	training
+891	10040880	0	test
+892	10040882	7	test
+893	10040943	8	training
+894	10040979	9	training
+895	10040984	8	training
+896	10041101	7	training
+897	10041235	5	training
+898	10041243	4	training
+899	10041347	0	training
+900	10041349	9	test
+901	10041466	6	training
+902	10041540	8	validation
+903	10041541	7	training
+904	10041549	3	training
+905	10041569	5	training
+906	10041591	9	training
+907	10041660	6	training
+908	10041807	5	test
+909	10041823	3	training
+910	10041834	0	training
+911	10041962	3	test
+912	10042033	6	validation
+913	10042101	0	training
+914	10042128	8	training
+915	10042209	8	training
+916	10042212	5	training
+917	10042316	4	training
+918	10042343	0	training
+919	10042361	7	training
+920	10042434	4	training
+921	10042458	8	test
+922	10042464	7	training
+923	10042602	6	test
+924	10042604	7	training
+925	10042609	3	training
+926	10042674	8	training
+927	10042682	5	validation
+928	10042727	4	validation
+929	10042772	9	test
+930	10042858	5	training
+931	10042868	4	training
+932	10042945	4	test
+933	10043071	9	test
+934	10043089	6	training
+935	10043118	8	training
+936	10043169	1	training
+937	10043220	3	test
+938	10043224	7	training
+939	10043239	1	training
+940	10043248	1	test
+941	10043255	5	training
+942	10043261	0	test
+943	10043269	0	training
+944	10043408	7	test
+945	10043414	3	validation
+946	10043417	0	validation
+947	10043431	3	training
+948	10043458	3	training
+949	10043521	3	test
+950	10043528	0	training
+951	10043554	9	training
+952	10043570	4	training
+953	10043595	5	training
+954	10043607	6	validation
+955	10043645	3	training
+956	10043648	0	training
+957	10043709	3	training
+958	10043744	4	training
+959	10043827	2	training
+960	10043882	5	training
+961	10043903	2	test
+962	10043951	1	test
+963	10043991	0	training
+964	10044016	7	training
+965	10044034	6	training
+966	10044044	7	training
+967	10044055	7	training
+968	10044066	5	training
+969	10044221	0	test
+970	10044223	7	training
+971	10044390	8	training
+972	10044439	1	training
+973	10044565	9	training
+974	10044640	9	training
+975	10044684	0	training
+976	10044755	1	training
+977	10045170	4	training
+978	10045285	3	test
+979	10045458	2	test
+980	10045555	8	training
+981	10046274	7	training
+982	10046306	9	training
+983	10046542	2	test
+984	10046543	8	test
+985	10046555	8	training
+986	10046571	9	training
+987	10046572	1	test
+988	10046735	4	training
+989	10046798	3	test
+990	10046910	0	training
+991	10046914	2	test
+992	10046996	4	validation
+993	10047115	5	training
+994	10047195	0	test
+995	10047216	2	training
+996	10047249	0	training
+997	10047281	1	validation
+998	10047289	8	training
+999	10047290	7	training
+1000	10047295	6	training
+1001	10047302	8	test
+1002	10047340	6	training
+1003	10047348	2	test
+1004	10047386	0	test
+1005	10047461	4	validation
+1006	10047513	8	test
+1007	10047531	4	validation
+1008	10047543	0	validation
+1009	10047571	5	validation
+1010	10047609	4	test
+1011	10047626	8	training
+1012	10047654	1	training
+1013	10047700	9	training
+1014	10047895	9	training
+1015	10047899	9	training
+1016	10047920	0	training
+1017	10047924	8	test
+1018	10047942	9	training
+1019	10047943	8	test
+1020	10048010	3	training
+1021	10048031	5	training
+1022	10048038	5	training
+1023	10048049	4	test
+1024	10048294	9	training
+1025	10048302	4	test
+1026	10048334	6	training
+1027	10048393	5	training
+1028	10048439	8	validation
+1029	10048561	2	training
+1030	10048595	3	training
+1031	10048620	1	training
+1032	10048624	2	training
+1033	10048629	0	training
+1034	10048685	3	training
+1035	10048706	7	training
+1036	10048709	5	training
+1037	10048762	5	training
+1038	10048777	0	training
+1039	10048780	1	training
+1040	10048799	3	training
+1041	10048832	1	training
+1042	10048858	7	validation
+1043	10048865	3	training
+1044	10048919	0	training
+1045	10048948	2	validation
+1046	10048959	4	test
+1047	10048962	4	training
+1048	10048964	0	test
+1049	10048975	0	test
+1050	10049088	9	test
+1051	10049119	9	training
+1052	10049146	0	test
+1053	10049151	6	training
+1054	10049177	2	test
+1055	10049187	3	validation
+1056	10049193	5	training
+1057	10049398	0	training
+1058	10049414	8	training
+1059	10049438	9	training
+1060	10049442	0	training
+1061	10049447	2	training
+1062	10049460	6	training
+1063	10049470	5	test
+1064	10049564	0	training
+1065	10049666	3	training
+1066	10049694	8	training
+1067	10049765	0	training
+1068	10049771	3	training
+1069	10049773	8	training
+1070	10049796	6	training
+1071	10049803	2	training
+1072	10049816	2	training
+1073	10049848	7	validation
+1074	10049866	1	training
+1075	10049947	0	training
+1076	10049948	0	training
+1077	10050012	0	training
+1078	10050031	5	test
+1079	10050040	3	training
+1080	10050207	1	training
+1081	10050219	5	validation
+1082	10050256	3	validation
+1083	10050296	9	training
+1084	10050337	2	training
+1085	10050380	4	training
+1086	10050510	5	training
+1087	10050528	8	training
+1088	10050558	4	training
+1089	10050584	9	validation
+1090	10050637	4	validation
+1091	10050778	4	training
+1092	10050819	8	training
+1093	10050845	5	training
+1094	10050904	6	test
+1095	10050953	5	validation
+1096	10050954	7	training
+1097	10051017	4	test
+1098	10051055	9	training
+1099	10051076	1	test
+1100	10051077	2	training
+1101	10051078	4	training
+1102	10051082	0	test
+1103	10051093	0	test
+1104	10051128	2	training
+1105	10051290	0	training
+1106	10051301	3	training
+1107	10051327	2	training
+1108	10051379	4	validation
+1109	10051398	9	test
+1110	10051482	2	training
+1111	10051576	0	training
+1112	10051589	4	training
+1113	10051592	6	training
+1114	10051608	4	training
+1115	10051612	3	training
+1116	10051728	2	training
+1117	10051753	4	training
+1118	10051792	5	training
+1119	10051837	4	validation
+1120	10052066	2	training
+1121	10052076	4	training
+1122	10052238	3	test
+1123	10052251	1	test
+1124	10052293	6	training
+1125	10052302	2	training
+1126	10052337	6	training
+1127	10052428	7	test
+1128	10052460	6	test
+1129	10052576	3	training
+1130	10052804	2	validation
+1131	10052840	2	training
+1132	10052897	3	training
+1133	10052904	7	training
+1134	10053156	6	validation
+1135	10053159	1	training
+1136	10053198	5	validation
+1137	10053213	2	training
+1138	10053405	4	training
+1139	10053555	1	training
+1140	10053573	1	training
+1141	10053631	1	validation
+1142	10053762	6	training
+1143	10053777	3	training
+1144	10053840	2	training
+1145	10054107	4	training
+1146	10054196	0	training
+1147	10054208	5	training
+1148	10054236	2	test
+1149	10054263	0	training
+1150	10054786	2	training
+1151	10054787	0	training
+1152	10054813	3	training
+1153	10054889	5	validation
+1154	10055014	0	training
+1155	10055041	3	training
+1156	10055113	2	validation
+1157	10055798	6	training
+1158	10055870	0	training
+1159	10056325	2	training
+1160	10056342	8	training
+1161	10056370	6	training
+1162	10056407	5	training
+1163	10056430	5	training
+1164	10056529	4	validation
+1165	10056812	4	training
+1166	10056819	4	training
+1167	10057040	1	training
+1168	10057320	4	validation
+1169	10057371	4	training
+1170	10057372	3	training
+1171	10057581	2	test
+1172	10057666	4	training
+1173	10057667	7	training
+1174	10057668	5	training
+1175	10057765	0	validation
+1176	10057840	6	test
+1177	10057867	4	training
+1178	10057970	5	test
+1179	10058046	5	test
+1180	10058080	9	training
+1181	10058097	0	test
+1182	10058108	7	training
+1183	10058151	2	training
+1184	10058267	5	training
+1185	10058360	0	test
+1186	10058467	5	training
+1187	10058648	0	training
+1188	10058709	2	test
+1189	10058818	2	training
+1190	10058854	0	training
+1191	10058907	1	training
+1192	10058919	5	training
+1193	10058920	8	training
+1194	10059056	3	training
+1195	10059245	2	training
+1196	10059282	5	training
+1197	10059442	2	training
+1198	10059570	9	training
+1199	10059865	0	training
+1200	10059866	1	test
+1201	10059895	6	training
+1202	10060734	2	test
+1203	10060795	5	validation
+1204	10060800	6	training
+1205	10060820	7	training
+1206	10060860	2	validation
+1207	10060862	3	training
+1208	10060921	0	training
+1209	10060945	6	training
+1210	10060946	4	training
+1211	10060954	5	training
+1212	10061011	1	training
+1213	10061024	6	training
+1214	10061043	4	test
+1215	10061104	3	training
+1216	10061105	6	training
+1217	10061111	4	training
+1218	10061114	9	validation
+1219	10061117	1	test
+1220	10061124	6	training
+1221	10061126	4	training
+1222	10061159	4	training
+1223	10061161	3	training
+1224	10061169	0	training
+1225	10061200	1	training
+1226	10061218	7	training
+1227	10061224	3	test
+1228	10061225	6	training
+1229	10061229	6	training
+1230	10061246	9	training
+1231	10061255	4	training
+1232	10061256	3	training
+1233	10061257	4	test
+1234	10061259	3	training
+1235	10061273	8	test
+1236	10061284	8	training
+1237	10061289	2	training
+1238	10061296	1	training
+1239	10061309	5	test
+1240	10061318	1	test
+1241	10061355	4	validation
+1242	10061366	0	training
+1243	10061368	5	validation
+1244	10061372	2	training
+1245	10061394	5	training
+1246	10061406	6	test
+1247	10061422	6	test
+1248	10061428	9	training
+1249	10061461	6	training
+1250	10061471	5	training
+1251	10061472	1	training
+1252	10061481	8	test
+1253	10061520	7	training
+1254	10061521	7	training
+1255	10061529	3	training
+1256	10061532	2	validation
+1257	10061536	4	training
+1258	10061593	5	training
+1259	10061598	1	training
+1260	10061599	3	training
+1261	10061619	8	training
+1262	10061623	0	training
+1263	10061728	7	training
+1264	10061744	3	training
+1265	10061818	8	training
+1266	10061819	2	training
+1267	10061822	3	training
+1268	10061835	4	training
+1269	10061873	2	training
+1270	10061877	5	training
+1271	10061880	4	training
+1272	10061920	7	training
+1273	10061998	5	training
+1274	10062015	0	training
+1275	10062016	3	training
+1276	10062042	6	validation
+1277	10062060	9	test
+1278	10062132	4	training
+1279	10062189	2	training
+1280	10062190	5	training
+1281	10062211	3	training
+1282	10062237	9	test
+1283	10062244	5	training
+1284	10062254	0	training
+1285	10062352	3	training
+1286	10062355	8	training
+1287	10062501	5	training
+1288	10062506	4	training
+1289	10062519	3	training
+1290	10062544	7	training
+1291	10062585	4	training
+1292	10062599	3	training
+1293	10062713	0	test
+1294	10062717	2	test
+1295	10062764	2	training
+1296	10063495	0	test
+1297	10063550	5	test
+1298	10063560	1	training
+1299	10063581	1	training
+1300	10063655	0	training
+1301	10063670	3	training
+1302	10063743	8	training
+1303	10063829	3	training
+1304	10063889	3	training
+1305	10064108	4	training
+1306	10064211	2	training
+1307	10064294	4	test
+1308	10064307	2	training
+1309	10064353	3	test
+1310	10064355	2	training
+1311	10064658	9	training
+1312	10064687	7	training
+1313	10064780	6	training
+1314	10064911	3	test
+1315	10065166	0	training
+1316	10065553	7	training
+1317	10065558	7	training
+1318	10065612	6	training
+1319	10065679	3	validation
+1320	10065687	5	training
+1321	10066169	1	validation
+1322	10066260	1	training
+1323	10066262	0	test
+1324	10066392	0	training
+1325	10066901	0	training
+1326	10067125	1	test
+1327	10067152	2	training
+1328	10067221	0	training
+1329	10067286	6	training
+1330	10067450	2	test
+1331	10067467	7	validation
+1332	10067584	7	training
+1333	10067585	9	training
+1334	10067620	0	validation
+1335	10067621	6	training
+1336	10067946	0	training
+1337	10067967	1	training
+1338	10068319	7	training
+1339	10069327	1	training
+1340	10069339	5	test
+1341	10069690	4	training
+1342	10070488	4	test
+1343	10070511	2	training
+1344	10070863	8	training
+1345	10070878	1	training
+1346	10071014	7	training
+1347	10071066	2	validation
+1348	10071404	1	training
+1349	10071408	1	training
+1350	10072005	2	training
+1351	10072268	1	training
+1352	10072970	1	training
+1353	10073302	1	test
+1354	10073508	5	training
+1355	10073513	1	training
+1356	10074170	5	test
+1357	10074903	1	test

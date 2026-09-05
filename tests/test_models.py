@@ -6,18 +6,18 @@ from pathlib import Path
 import pytest
 import torch
 
-from biax.formula_adverse_reaction.model import BiAxADR, Config as FormulaConfig
-from biax.drug_drug_interaction.model import BiAxWestern, ModelConfig as DDIConfig
-from biax.drug_pair_adverse_reaction.model import BiAxFullPairADR, ModelConfig as PairConfig
-from biax.herb_drug_interaction.model import BiAxHDI, Config as HerbConfig
-from biax.herb_drug_interaction.unseen_herb_expert import UnseenHerbExpert
-from biax.herb_drug_interaction.reproduce import reproduce_all
+from bora.formula_adverse_reaction.model import BORAFormulaADR, Config as FormulaConfig
+from bora.drug_drug_interaction.model import BORADrugInteraction, ModelConfig as DDIConfig
+from bora.drug_pair_adverse_reaction.model import BORAPairADR, ModelConfig as PairConfig
+from bora.herb_drug_interaction.model import BORAHerbDrug, Config as HerbConfig
+from bora.herb_drug_interaction.unseen_herb_expert import UnseenHerbExpert
+from bora.herb_drug_interaction.reproduce import reproduce_all
 
 
 def test_formula_forward() -> None:
     cfg = FormulaConfig(d_model=8, n_heads=2, n_layers=1, dropout=0.0,
                         mem_topk_f=2, mem_topk_a=2)
-    model = BiAxADR(8, 12, 6, cfg, n_endpoint=2, n_material=5).eval()
+    model = BORAFormulaADR(8, 12, 6, cfg, n_endpoint=2, n_material=5).eval()
     formula_count, endpoint_count, slots = 3, 2, 4
     logits, _, _, _ = model(
         torch.randn(formula_count, slots, 8), torch.ones(formula_count, slots),
@@ -39,7 +39,7 @@ def test_drug_pair_symmetry() -> None:
     cfg = DDIConfig(semantic_dim=8, graph_dim=4, structure_dim=9, d_model=8,
                     n_heads=2, n_layers=1, mechanism_dim=6,
                     memory_topk_left=2, memory_topk_right=2)
-    model = BiAxWestern("ddi_binary", n_entity=4, cfg=cfg).eval()
+    model = BORADrugInteraction("ddi_binary", n_entity=4, cfg=cfg).eval()
     token, state = model.encode_entities(_entity_features(4, cfg))
     labels, observed, mechanism = torch.zeros(4, 4), torch.zeros(4, 4), torch.randn(1, 6)
     ab = model.score_ddi_binary(token, state, torch.tensor([0]), torch.tensor([1]), mechanism,
@@ -54,7 +54,7 @@ def test_drug_pair_adr_forward() -> None:
                      endpoint_mechanism_dim=8, pair_mechanism_dim=6,
                      d_model=8, n_heads=2, n_layers=1,
                      memory_topk_drug=2, memory_topk_endpoint=2)
-    model = BiAxFullPairADR(n_endpoint=3, cfg=cfg).eval()
+    model = BORAPairADR(n_endpoint=3, cfg=cfg).eval()
     drug = {"semantic": torch.randn(4, 8), "graph": torch.randn(4, 4),
             "structure": torch.randn(4, 9)}
     endpoint = {"semantic": torch.randn(3, 8), "graph": torch.randn(3, 4),
@@ -76,14 +76,14 @@ def test_herb_drug_forward() -> None:
                      constituent_dim=9, pair_mechanism_dim=6,
                      d_model=8, n_heads=2, n_layers=1,
                      memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
-    model = BiAxHDI(3, 4, cfg).eval()
+    model = BORAHerbDrug(3, 4, cfg).eval()
     semantic_h, graph_h, structure_h = torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9)
     semantic_d, graph_d, structure_d = torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9)
     herb_tokens, _, herb_state = model.encode_herb(
         semantic_h, graph_h, structure_h, torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool)
     )
     _, drug_state = model.encode_drug(semantic_d, graph_d, structure_d)
-    memory = model.label_memory(herb_state, drug_state, torch.zeros(3, 4), torch.ones(3, 4))
+    memory = model.retrieve_relations(herb_state, drug_state, torch.zeros(3, 4), torch.ones(3, 4))
     logits = model.score(herb_tokens, torch.ones(3, 5, dtype=torch.bool), herb_state, drug_state,
                          torch.tensor([0, 1]), torch.tensor([1, 2]), torch.randn(2, 6), memory)
     assert logits.shape == (2,)
@@ -94,13 +94,13 @@ def test_herb_router_zero_alpha_returns_stability_guarded_core() -> None:
                      constituent_dim=9, pair_mechanism_dim=6,
                      d_model=8, n_heads=2, n_layers=1,
                      memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
-    model = BiAxHDI(3, 4, cfg).eval()
+    model = BORAHerbDrug(3, 4, cfg).eval()
     herb_tokens, _, herb_state = model.encode_herb(
         torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9),
         torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool))
     _, drug_state = model.encode_drug(
         torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9))
-    model.label_memory(herb_state, drug_state, torch.zeros(3, 4),
+    model.retrieve_relations(herb_state, drug_state, torch.zeros(3, 4),
                        torch.tensor([[1, 1, 1, 1], [0, 0, 0, 0],
                                      [1, 1, 1, 1]], dtype=torch.float32))
     core_logit = torch.tensor([-100.0, 0.75])
@@ -120,13 +120,13 @@ def test_herb_router_leaves_supported_cells_unchanged() -> None:
                      constituent_dim=9, pair_mechanism_dim=6,
                      d_model=8, n_heads=2, n_layers=1,
                      memory_topk_herb=2, memory_topk_drug=2, dropout=0.0)
-    model = BiAxHDI(3, 4, cfg).eval()
+    model = BORAHerbDrug(3, 4, cfg).eval()
     _, _, herb_state = model.encode_herb(
         torch.randn(3, 8), torch.randn(3, 4), torch.randn(3, 9),
         torch.randn(3, 5, 9), torch.ones(3, 5, dtype=torch.bool))
     _, drug_state = model.encode_drug(
         torch.randn(4, 8), torch.randn(4, 4), torch.randn(4, 9))
-    model.label_memory(herb_state, drug_state, torch.zeros(3, 4),
+    model.retrieve_relations(herb_state, drug_state, torch.zeros(3, 4),
                        torch.tensor([[1, 1, 1, 1], [0, 0, 0, 0],
                                      [1, 1, 1, 1]], dtype=torch.float32))
     core_logit = torch.tensor([-1.25, 0.75])
@@ -139,14 +139,14 @@ def test_herb_router_leaves_supported_cells_unchanged() -> None:
 
 
 @pytest.mark.skipif(
-    "BIAX_HERB_DRUG_DATA" not in os.environ,
-    reason="set BIAX_HERB_DRUG_DATA to run the public-data reproduction test")
+    "BORA_HERB_DRUG_DATA" not in os.environ,
+    reason="set BORA_HERB_DRUG_DATA to run the public-data reproduction test")
 def test_herb_drug_release_reproduces_reported_metrics() -> None:
     repository = Path(__file__).resolve().parents[1]
     report = reproduce_all(
-        os.environ["BIAX_HERB_DRUG_DATA"],
+        os.environ["BORA_HERB_DRUG_DATA"],
         repository / "parameters/herb_drug_interaction",
-        os.environ.get("BIAX_DEVICE", "cpu"),
+        os.environ.get("BORA_DEVICE", "cpu"),
         reported_decimals=3,
     )
     assert report["run_count"] == 30

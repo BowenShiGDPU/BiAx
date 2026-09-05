@@ -6,7 +6,7 @@ from torch.nn import functional as F
 from sklearn.metrics import average_precision_score
 from .data import Bench, Cohort, Context
 from .metrics import pooled_metrics
-from .model import Config, BiAxADR
+from .model import Config, BORAFormulaADR
 
 def _tensors(cohort: Cohort, bench: Bench, device):
     mat = torch.as_tensor(cohort.material_feature, device=device)
@@ -46,10 +46,10 @@ class Runner:
         observed[f, a] = 1.0
         return (labels, observed)
 
-    def _new(self, seed: int) -> BiAxADR:
+    def _new(self, seed: int) -> BORAFormulaADR:
         torch.manual_seed(seed)
         np.random.seed(seed % 2 ** 31)
-        model = BiAxADR(d_material=self.bench.main.material_feature.shape[1], d_endpoint=self.bench.endpoints.feature.shape[1], n_mech=self.bench.main.pair_mech.shape[-1], cfg=self.cfg, n_endpoint=len(self.bench.endpoints.adr_ids), n_material=self.bench.main.presence.shape[1]).to(self.device)
+        model = BORAFormulaADR(d_material=self.bench.main.material_feature.shape[1], d_endpoint=self.bench.endpoints.feature.shape[1], n_mech=self.bench.main.pair_mech.shape[-1], cfg=self.cfg, n_endpoint=len(self.bench.endpoints.adr_ids), n_material=self.bench.main.presence.shape[1]).to(self.device)
         return model
 
     def fit(self, train_rows: np.ndarray, seed: int,
@@ -186,7 +186,7 @@ class Runner:
         return [(i, j) for i in range(len(model.mat_views)) for j in range(len(model.adr_views))]
 
     @torch.no_grad()
-    def predict_main(self, model: BiAxADR, rows: np.ndarray) -> np.ndarray:
+    def predict_main(self, model: BORAFormulaADR, rows: np.ndarray) -> np.ndarray:
         mat_feat, dose, mask, mech, presence, comp_dose = self.main
         idx = torch.as_tensor(rows, device=self.device)
         acc = []
@@ -197,7 +197,7 @@ class Runner:
         return agg[idx].cpu().numpy().astype(np.float64)
 
     @torch.no_grad()
-    def predict_external(self, model: BiAxADR, rows: np.ndarray) -> np.ndarray:
+    def predict_external(self, model: BORAFormulaADR, rows: np.ndarray) -> np.ndarray:
         mat_feat, dose, mask, mech, presence, comp_dose = self.external
         ref = self.main[:3]
         idx = torch.as_tensor(rows, device=self.device)

@@ -1,18 +1,9 @@
 #!/usr/bin/env python3
-"""BiAx on the herb-drug axis shape, transcribed from the two other task instances.
+"""BORA herb-drug model.
 
-The herb axis is a variable-size set, exactly as a herbal formula is a set of
-medicinal materials, so it reuses the formula arm's masked constituent
-self-attention and its conditional readout. The drug axis is a single molecule,
-so it reuses the pair arm's ChannelEncoder over the three feature blocks.
-
-Every structural decision here is taken from the reference sources rather than
-invented: the three feature blocks enter as three tokens with a learned channel
-embedding; the readout attends from one axis onto the other; the score is an
-additive fusion of a structural channel, a mechanism channel and a label-memory
-channel; the channel scale starts at [0, 0, 1] so the model begins exactly at
-the memory marginal and can only improve on it; and the index-specific residual
-starts at zero.
+Herb constituents are encoded as a masked token set. Drug context is encoded
+from semantic, graph and structure features. Query-conditioned readout and
+observed-relation retrieval provide complementary prediction channels.
 """
 from __future__ import annotations
 
@@ -120,7 +111,7 @@ class ConditionalReadout(nn.Module):
         return self.norm(condition + value.squeeze(1))
 
 
-class BiAxHDI(nn.Module):
+class BORAHerbDrug(nn.Module):
     def __init__(self, n_herb: int, n_drug: int, cfg: Config | None = None):
         super().__init__()
         self.cfg = cfg or Config()
@@ -224,7 +215,7 @@ class BiAxHDI(nn.Module):
         released evaluation path.
         """
         if not hasattr(self, "_n_obs_herb"):
-            raise RuntimeError("label_memory must be evaluated before routing")
+            raise RuntimeError("retrieve_relations must be evaluated before routing")
         route = self._n_obs_herb[herb_index] <= EPS
         core_probability = torch.sigmoid(core_logit)
         if not bool(route.any()):
@@ -246,7 +237,7 @@ class BiAxHDI(nn.Module):
         return torch.softmax(logits.masked_fill(logits < cut, float("-inf")),
                              dim=-1)
 
-    def label_memory(self, herb_state, drug_state, labels, observed):
+    def retrieve_relations(self, herb_state, drug_state, labels, observed):
         """Two-sided diffusion of the observed label matrix, after the reference
         formula arm's memory operator.
 
@@ -301,7 +292,7 @@ class BiAxHDI(nn.Module):
         if c.graph_expert:
             # The graph expert sees training-positive edges only. Its inputs
             # are detached so its transductive objective cannot rewrite the
-            # inductive BiAx encoders used for unseen entities.
+            # inductive BORA encoders used for unseen entities.
             positive = (observed * labels).detach()
             gh, gd = herb_state.detach(), drug_state.detach()
             herb_degree = positive.sum(dim=1, keepdim=True).clamp_min(1.0)

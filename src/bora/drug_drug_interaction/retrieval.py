@@ -5,8 +5,8 @@ from torch import nn
 from torch.nn import functional as F
 
 
-class BiAxisMemory(nn.Module):
-    """Learned two-axis label memory with task-defined exact exclusions."""
+class ObservedRelationRetrieval(nn.Module):
+    """Observed-relation retrieval with task-specific query exclusions."""
 
     def __init__(self, d_model: int, topk_left: int = 20, topk_right: int = 10,
                  tau_init: float = -1.0) -> None:

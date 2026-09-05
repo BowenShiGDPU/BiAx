@@ -112,7 +112,7 @@ class Block(nn.Module):
         x = x + self.ff(self.n2(x))
         return x
 
-class BiAxADR(nn.Module):
+class BORAFormulaADR(nn.Module):
 
     def __init__(self, d_material: int, d_endpoint: int, n_mech: int, cfg: Config, n_endpoint: int=43, n_material: int=121):
         super().__init__()

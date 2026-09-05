@@ -80,8 +80,8 @@ class ConditionalReadout(nn.Module):
         return self.norm(condition + value.squeeze(1))
 
 
-class BiAxFullPairADR(nn.Module):
-    """Full Pair-ADR BiAx instance with support-aware dual-axis label transfer."""
+class BORAPairADR(nn.Module):
+    """BORA drug-pair–ADR model with support-aware observed-relation retrieval."""
 
     def __init__(self, n_endpoint: int, cfg: ModelConfig | None = None) -> None:
         super().__init__()
@@ -151,7 +151,7 @@ class BiAxFullPairADR(nn.Module):
         score = q @ r.t() / log_tau.exp().clamp(0.02, 10.0)
         k = min(max(1, int(topk)), score.shape[-1])
         cut = score.topk(k, dim=-1).values[..., -1:]
-        # Keep all boundary ties, matching the original BiAx sparse-softmax rule.
+        # Retain all ties at the sparse-softmax cutoff.
         active_count = (score >= cut).sum(dim=-1)
         max_active = int(active_count.max().item())
         similarity, index = score.topk(max_active, dim=-1)
